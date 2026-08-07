@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Meter Adoption &amp; Digital Marketing — Research Report</title>
+<meta name="description" content="A study on the effectiveness of digital marketing strategies in promoting smart meter adoption. A case study of Awign Enterprises Pvt. Ltd. Shreyas R, Jain (Deemed-to-be University), 2025–26.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   SMART METER ADOPTION — RESEARCH REPORT
+   Direction: corporate energy brand
+   Deep navy ground · electric cyan + amber · layered cards
+   Bars for lists, columns for scales
+   ========================================================== */
+
+:root{
+  --bg:#070C1A; --bg-2:#0B1224;
+  --surface:#0E1729; --surface-2:#141F36; --surface-3:#1A2742;
+  --line:#1D2B47; --line-2:#28395C;
+  --text:#EAF1FB; --text-2:#93A6C4; --text-3:#5D7191;
+  --cyan:#22D3EE; --cyan-2:#0EA5C6;
+  --amber:#FBBF24; --violet:#8B7CF6; --green:#34D399;
+  --red:#FB7185; --blue:#60A5FA;
+  --track:#18243D;
+  --glow:0 0 44px rgba(34,211,238,.22);
+  --shadow:0 24px 60px -30px rgba(0,0,0,.85);
+  --card-top:linear-gradient(90deg,transparent,rgba(34,211,238,.55),transparent);
+
+  --f-disp:"Sora","Segoe UI",system-ui,sans-serif;
+  --f-body:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  --maxw:1300px;
+  --pad:40px;
+  --nav-h:62px;
+}
+
+html[data-theme="light"]{
+  --bg:#F4F7FC; --bg-2:#FFFFFF;
+  --surface:#FFFFFF; --surface-2:#F3F7FC; --surface-3:#E9F0F9;
+  --line:#DEE7F2; --line-2:#C6D5E8;
+  --text:#08172B; --text-2:#4B5F7C; --text-3:#7C8FA9;
+  --cyan:#0891B2; --cyan-2:#0E7490;
+  --amber:#B45309; --violet:#6D4FD8; --green:#0F8A63;
+  --red:#D14351; --blue:#2563EB;
+  --track:#E4EBF5;
+  --glow:0 0 40px rgba(8,145,178,.14);
+  --shadow:0 18px 44px -28px rgba(11,30,60,.35);
+  --card-top:linear-gradient(90deg,transparent,rgba(8,145,178,.4),transparent);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 18px)}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--f-body);font-size:16.5px;line-height:1.65;
+  font-feature-settings:"cv05","ss01";
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  transition:background .4s ease,color .4s ease;
+}
+
+/* ambient energy field behind everything */
+.field{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.field .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+.field .o1{width:640px;height:640px;top:-240px;left:-160px;background:radial-gradient(circle,rgba(34,211,238,.5),transparent 65%)}
+.field .o2{width:560px;height:560px;top:32%;right:-220px;background:radial-gradient(circle,rgba(139,124,246,.42),transparent 65%)}
+.field .o3{width:520px;height:520px;bottom:-180px;left:22%;background:radial-gradient(circle,rgba(251,191,36,.28),transparent 65%)}
+html[data-theme="light"] .field .orb{opacity:.32}
+.field .grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;opacity:.32;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 20%,transparent 78%);
+}
+
+a{color:inherit}
+::selection{background:var(--cyan);color:var(--bg)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+
+h1,h2,h3,h4,.disp{font-family:var(--f-disp);margin:0;letter-spacing:-.025em;line-height:1.08}
+h1{font-weight:800;font-size:clamp(34px,5.2vw,68px);letter-spacing:-.038em}
+h2{font-weight:700;font-size:clamp(28px,3.7vw,46px);letter-spacing:-.032em}
+h3{font-weight:600;font-size:clamp(19px,2vw,25px);letter-spacing:-.02em}
+h4{font-weight:600;font-size:17px;letter-spacing:-.012em}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+strong,b{font-weight:600;color:var(--text)}
+
+.mono{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.num{font-family:var(--f-disp);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.muted{color:var(--text-2)}
+.tiny{font-size:13px;line-height:1.55;color:var(--text-2)}
+.lede{font-size:clamp(17.5px,1.7vw,20.5px);line-height:1.6;color:var(--text-2)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);position:relative;z-index:1}
+
+/* ---------------- nav ---------------- */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));width:0;z-index:120;transition:width .1s linear}
+nav.top{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:110;
+  background:color-mix(in srgb,var(--bg) 78%,transparent);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+nav.top .inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-disp);font-weight:700;font-size:14.5px;letter-spacing:-.02em;white-space:nowrap}
+.logo .mark{
+  width:26px;height:26px;border-radius:7px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--cyan),var(--violet));color:#05101f;
+  font-family:var(--f-mono);font-size:11px;font-weight:500;
+  box-shadow:var(--glow);
+}
+.navlinks{display:flex;gap:2px;margin-left:auto}
+.navlinks a{
+  text-decoration:none;color:var(--text-3);font-size:13px;font-weight:500;
+  padding:7px 11px;border-radius:7px;transition:.16s;white-space:nowrap;
+}
+.navlinks a:hover{color:var(--text);background:var(--surface-2)}
+.navlinks a[aria-current="true"]{color:var(--cyan);background:color-mix(in srgb,var(--cyan) 12%,transparent)}
+.navbtns{display:flex;gap:6px;margin-left:14px}
+.iconbtn{
+  width:34px;height:34px;border-radius:8px;border:1px solid var(--line-2);
+  background:var(--surface);color:var(--text-2);cursor:pointer;display:grid;place-items:center;
+  font-family:var(--f-mono);font-size:10px;transition:.16s;padding:0;
+}
+.iconbtn:hover{color:var(--cyan);border-color:var(--cyan);background:var(--surface-2)}
+.menubtn{display:none}
+@media(max-width:1080px){
+  .navlinks{display:none;position:absolute;top:var(--nav-h);left:0;right:0;flex-direction:column;
+    background:var(--bg-2);border-bottom:1px solid var(--line);padding:10px var(--pad) 16px;gap:2px}
+  .navlinks.open{display:flex}
+  .navlinks a{padding:11px 12px;font-size:15px}
+  .menubtn{display:grid;margin-left:auto}
+  .navbtns{margin-left:8px}
+}
+
+/* ---------------- sections ---------------- */
+section{padding:104px 0;position:relative;z-index:1}
+.sechead{margin-bottom:52px;max-width:940px}
+.tag{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cyan);border:1px solid color-mix(in srgb,var(--cyan) 34%,transparent);
+  background:color-mix(in srgb,var(--cyan) 9%,transparent);
+  padding:6px 13px;border-radius:100px;margin-bottom:22px;
+}
+.tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.sechead h2{margin-bottom:18px}
+.secno{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;color:var(--text-3);
+  display:flex;align-items:center;gap:14px;margin-bottom:30px;
+}
+.secno::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line-2),transparent)}
+
+/* ---------------- cards ---------------- */
+.card{
+  position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:26px;overflow:hidden;
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top);opacity:.7}
+.card.hov:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h4{margin-bottom:11px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+
+/* ---------------- hero ---------------- */
+.hero{padding:calc(var(--nav-h) + 78px) 0 84px}
+.hero .eyeline{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:26px;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3);
+}
+.hero .eyeline b{color:var(--cyan);font-weight:500}
+.hero h1{max-width:19ch;margin-bottom:26px}
+.hero h1 .hl{
+  background:linear-gradient(100deg,var(--cyan),var(--violet) 60%,var(--amber));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .lede{max-width:66ch;margin-bottom:34px}
+.byline{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:52px}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;background:var(--surface);
+  border:1px solid var(--line);border-radius:100px;padding:7px 15px;
+  font-size:13px;color:var(--text-2);
+}
+.chip b{color:var(--text);font-weight:500}
+
+/* KPI strip */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.kpis{grid-template-columns:1fr 1fr;gap:10px}}
+.kpi{
+  position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:14px;padding:20px 18px 18px;overflow:hidden;
+  transition:border-color .25s,transform .25s;
+}
+.kpi:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.kpi .lab{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3);display:block;margin-bottom:14px;min-height:2.6em;line-height:1.35}
+.kpi .val{font-family:var(--f-disp);font-weight:800;font-size:clamp(34px,4vw,46px);letter-spacing:-.045em;line-height:.95;font-variant-numeric:tabular-nums;display:inline-block}
+.kpi .suf{font-family:var(--f-mono);font-size:14px;color:var(--text-3);margin-left:3px;font-weight:400;letter-spacing:0}
+.kpi .sub{font-size:12.5px;color:var(--text-2);margin-top:10px;line-height:1.45;display:block}
+.kpi .track{display:block;height:3px;border-radius:2px;background:var(--track);margin-top:16px;overflow:hidden}
+.kpi .track i{display:block;height:100%;width:0;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+
+/* ---------------- reveal ---------------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+@media(max-width:760px){
+  :root{--pad:20px}
+  body{font-size:16px}
+  section{padding:70px 0}
+  .sechead{margin-bottom:36px}
+  .card{padding:20px;border-radius:14px}
+  .hero{padding:calc(var(--nav-h) + 46px) 0 56px}
+}
+/* ================= FEATURED CHART ================= */
+.feature{
+  position:relative;background:linear-gradient(160deg,var(--surface-2),var(--surface));
+  border:1px solid var(--line-2);border-radius:20px;padding:34px;overflow:hidden;
+}
+.feature::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top)}
+.feature .fhead{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.feature .fhead h3{flex:1;min-width:240px}
+.bigbars{display:flex;flex-direction:column;gap:16px}
+.bb{display:grid;grid-template-columns:126px 1fr;gap:18px;align-items:center}
+@media(max-width:640px){.bb{grid-template-columns:1fr;gap:7px}}
+.bb .name{display:flex;align-items:center;gap:10px;font-weight:500;font-size:15px}
+.bb .name i{width:10px;height:10px;border-radius:3px;flex:none}
+.bb .lane{position:relative;height:44px;background:var(--track);border-radius:9px;overflow:hidden}
+.bb .lane b{
+  position:absolute;left:0;top:0;bottom:0;width:100%;border-radius:9px;
+  transform:scaleX(0);transform-origin:left;transition:transform 1.05s cubic-bezier(.16,.84,.3,1);
+}
+.bb .lane .pct{
+  position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-family:var(--f-disp);font-weight:700;font-size:20px;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;color:var(--text);
+}
+.bb.lead .lane{height:56px}
+.bb.lead .lane .pct{font-size:26px}
+
+/* ================= CHART CARDS ================= */
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(354px,1fr));gap:16px}
+.chart{
+  position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,box-shadow .25s;
+}
+.chart:hover{border-color:var(--line-2);box-shadow:var(--shadow)}
+.chart::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top);opacity:.6}
+.chead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:20px 22px 14px}
+.chead .ref{font-family:var(--f-mono);font-size:10px;letter-spacing:.13em;color:var(--cyan);text-transform:uppercase}
+.chead h4{flex:1;min-width:160px;font-size:16px}
+.ctools{display:flex;gap:5px}
+.ctools button{
+  font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line-2);background:transparent;color:var(--text-3);
+  padding:5px 9px;border-radius:6px;cursor:pointer;transition:.16s;
+}
+.ctools button:hover{color:var(--text);border-color:var(--text-3)}
+.ctools button[aria-pressed="true"]{background:var(--cyan);border-color:var(--cyan);color:#04121f}
+html[data-theme="light"] .ctools button[aria-pressed="true"]{color:#fff}
+.cbody{padding:6px 22px 18px;flex:1;display:flex;align-items:center}
+.cbody svg{width:100%;height:auto;display:block;overflow:visible}
+.cfoot{padding:0 22px 22px;font-size:13.5px;line-height:1.55;color:var(--text-2);border-top:1px solid var(--line);margin-top:auto;padding-top:16px}
+.cfoot .src{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);display:block;margin-bottom:8px}
+
+/* split (binary) chart */
+.split{width:100%;padding:6px 0 4px}
+.split .heads{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}
+.split .heads .big{font-family:var(--f-disp);font-weight:800;font-size:52px;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums}
+.split .heads .big span{font-size:22px;color:var(--text-3);margin-left:2px}
+.split .heads .small{text-align:right}
+.split .heads .small .n{font-family:var(--f-disp);font-weight:700;font-size:26px;letter-spacing:-.04em;color:var(--text-2)}
+.split .heads .lb{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);display:block;margin-top:5px}
+.split .lane{height:34px;border-radius:9px;overflow:hidden;display:flex;background:var(--track)}
+.split .lane i{display:block;height:100%;transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.16,.84,.3,1)}
+.split .lane i:first-child{border-radius:9px 0 0 9px}
+.split .lane i:last-child{border-radius:0 9px 9px 0}
+
+/* svg chart primitives */
+.axlab{font-family:var(--f-mono);font-size:9.5px;fill:var(--text-3);letter-spacing:.08em;text-transform:uppercase}
+.axlab.sm{font-size:8.5px;letter-spacing:.01em;text-transform:none}
+.vallab{font-family:var(--f-disp);font-size:13px;font-weight:700;fill:var(--text);letter-spacing:-.02em}
+.gridln{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+.barh,.barv{transition:opacity .18s}
+.barh:hover,.barv:hover{opacity:.75}
+.meanln{stroke:var(--amber);stroke-width:1.5;stroke-dasharray:5 4}
+.meantx{font-family:var(--f-mono);font-size:9.5px;fill:var(--amber);letter-spacing:.1em}
+
+table.dt{width:100%;border-collapse:collapse;font-size:13px}
+table.dt th{
+  text-align:left;padding:9px 8px;border-bottom:1px solid var(--line-2);
+  font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);font-weight:400;
+}
+table.dt td{padding:9px 8px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+table.dt td:nth-child(n+2){text-align:right;font-family:var(--f-mono);font-size:12px}
+table.dt tr:last-child td{border-bottom:0;font-weight:600;color:var(--text)}
+table.dt .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:9px}
+
+/* filter chips */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chips button{
+  font-size:13px;font-weight:500;border:1px solid var(--line-2);background:var(--surface);
+  color:var(--text-2);padding:8px 15px;border-radius:100px;cursor:pointer;transition:.16s;
+}
+.chips button:hover{color:var(--text);border-color:var(--text-3)}
+.chips button[aria-pressed="true"]{background:var(--cyan);border-color:var(--cyan);color:#04121f;font-weight:600}
+html[data-theme="light"] .chips button[aria-pressed="true"]{color:#fff}
+
+/* ================= PESTEL / SWOT / FLOW ================= */
+.pestel{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.pestel button{
+  text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:20px 18px;cursor:pointer;font:inherit;color:var(--text);transition:.24s;
+}
+.pestel button:hover{border-color:var(--line-2)}
+.pestel button[aria-expanded="true"]{border-color:var(--cyan);background:var(--surface-2);box-shadow:var(--glow)}
+.pestel .l{font-family:var(--f-disp);font-weight:800;font-size:32px;line-height:1;letter-spacing:-.05em;
+  background:linear-gradient(140deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pestel .n{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3);margin:9px 0 0}
+.pestel .t{font-size:14px;line-height:1.5;color:var(--text-2);max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .3s,margin .3s;margin-top:0}
+.pestel button[aria-expanded="true"] .t{max-height:300px;opacity:1;margin-top:12px}
+
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.swot{grid-template-columns:1fr}}
+.swot .q{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;overflow:hidden}
+.swot .q::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+.swot .q.s::after{background:var(--green)} .swot .q.w::after{background:var(--amber)}
+.swot .q.o::after{background:var(--blue)}  .swot .q.t::after{background:var(--red)}
+.swot .q h4{margin-bottom:3px}
+.swot .q .ax{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.swot ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.65;color:var(--text-2)}
+
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(186px,1fr));gap:12px}
+.fnode{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 18px;transition:.24s}
+.fnode:hover{border-color:var(--cyan);box-shadow:var(--glow)}
+.fnode .st{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:10px}
+.fnode h4{font-size:15.5px;margin-bottom:7px}
+.fnode p{font-size:13.5px;line-height:1.5;color:var(--text-2);margin:0}
+.fnode .vb{display:inline-block;margin-top:12px;font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--line-2);color:var(--text-3);padding:3px 8px;border-radius:100px}
+
+.theory{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.theory .ab{font-family:var(--f-disp);font-weight:800;font-size:30px;letter-spacing:-.045em;
+  background:linear-gradient(140deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.theory .sr{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);margin:8px 0 14px}
+.theory p{font-size:14.5px;line-height:1.6;color:var(--text-2);margin:0}
+
+/* ================= SIMULATOR ================= */
+.sim{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:start}
+@media(max-width:940px){.sim{grid-template-columns:1fr}}
+.presets{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px}
+.presets button{
+  font-size:12px;font-weight:500;border:1px solid var(--line-2);background:transparent;color:var(--text-2);
+  padding:7px 13px;border-radius:100px;cursor:pointer;transition:.16s;
+}
+.presets button:hover{color:var(--cyan);border-color:var(--cyan)}
+.slrow{display:grid;grid-template-columns:112px 1fr 68px;gap:14px;align-items:center;margin-bottom:17px}
+@media(max-width:520px){.slrow{grid-template-columns:96px 1fr 58px;gap:10px}}
+.slrow .cn{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500}
+.slrow .cn i{width:9px;height:9px;border-radius:3px;flex:none}
+.slrow output{font-family:var(--f-disp);font-weight:700;font-size:19px;text-align:right;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.slrow output small{font-family:var(--f-mono);font-size:9.5px;font-weight:400;color:var(--text-3);margin-left:2px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:5px;border-radius:3px;background:var(--track);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:var(--cyan);border:3px solid var(--surface);cursor:grab;box-shadow:0 0 0 1px var(--cyan),0 0 12px color-mix(in srgb,var(--cyan) 60%,transparent)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--cyan);
+  border:3px solid var(--surface);cursor:grab;box-shadow:0 0 0 1px var(--cyan)}
+.toggles{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.tgl{display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--line-2);
+  border-radius:100px;padding:8px 14px;font-size:12.5px;color:var(--text-2);transition:.18s;user-select:none}
+.tgl:hover{color:var(--text);border-color:var(--text-3)}
+.tgl input{position:absolute;opacity:0;width:0;height:0}
+.tgl .bx{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--text-3);flex:none;transition:.18s}
+.tgl input:checked ~ .bx{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.tgl:has(input:checked){border-color:var(--cyan);color:var(--text)}
+.tgl input:focus-visible ~ .bx{outline:2px solid var(--cyan);outline-offset:2px}
+
+.gauge{position:relative;background:linear-gradient(165deg,var(--surface-2),var(--surface));
+  border:1px solid var(--line-2);border-radius:16px;overflow:hidden}
+.gauge::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top)}
+.gauge .top{padding:30px 24px 24px;text-align:center;position:relative}
+.gauge .idx{font-family:var(--f-disp);font-weight:800;font-size:clamp(60px,9vw,84px);line-height:.88;letter-spacing:-.055em;
+  background:linear-gradient(140deg,var(--cyan),var(--violet) 70%,var(--amber));
+  -webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.gauge .cap{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-top:12px}
+.gauge .meter{height:6px;border-radius:4px;background:var(--track);margin:20px 0 14px;overflow:hidden}
+.gauge .meter i{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,var(--cyan),var(--violet),var(--amber));transition:width .7s cubic-bezier(.2,.8,.2,1)}
+.gauge .vd{font-size:13.5px;color:var(--text-2)}
+.gauge .rows{padding:4px 24px 22px}
+.gauge .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.gauge .row:last-child{border-bottom:0}
+.gauge .row span:first-child{color:var(--text-3);font-family:var(--f-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+.gauge .row span:last-child{font-family:var(--f-mono);font-size:12px;color:var(--text)}
+.caution{border-left:2px solid var(--amber);background:color-mix(in srgb,var(--amber) 7%,transparent);
+  border-radius:0 12px 12px 0;padding:16px 20px;margin-top:16px;font-size:13.5px;line-height:1.6;color:var(--text-2)}
+
+/* ================= SURVEY ================= */
+.survey{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;position:relative}
+.survey::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top)}
+.svtop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:18px 24px;border-bottom:1px solid var(--line)}
+.svtop .mono{color:var(--text-3)}
+.svprog{height:2px;background:var(--track)}
+.svprog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.svbody{padding:30px 24px 24px;min-height:290px}
+.svq{font-family:var(--f-disp);font-weight:600;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.028em;line-height:1.16;margin-bottom:22px;max-width:24ch}
+.svopts{display:flex;flex-direction:column;gap:9px;max-width:560px}
+.svopts button{
+  position:relative;text-align:left;font:inherit;font-size:15px;color:var(--text);cursor:pointer;
+  background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:13px 16px;
+  transition:.16s;display:flex;align-items:center;gap:13px;overflow:hidden;
+}
+.svopts button:hover{border-color:var(--cyan)}
+.svopts button .k{font-family:var(--f-mono);font-size:10px;color:var(--text-3);border:1px solid var(--line-2);
+  width:21px;height:21px;display:grid;place-items:center;border-radius:6px;flex:none}
+.svopts button .fl{position:absolute;left:0;top:0;bottom:0;width:0;background:color-mix(in srgb,var(--cyan) 20%,transparent);
+  transition:width .8s cubic-bezier(.16,.84,.3,1);z-index:0}
+.svopts button > *{position:relative;z-index:1}
+.svopts button .pc{margin-left:auto;font-family:var(--f-mono);font-size:12px;opacity:0;transition:opacity .4s;color:var(--text-2)}
+.svopts.done button{pointer-events:none}
+.svopts.done button .pc{opacity:1}
+.svopts.done button.mine{border-color:var(--cyan);box-shadow:var(--glow)}
+.svsay{margin-top:22px;font-size:15px;line-height:1.6;color:var(--text-2);min-height:3.2em;max-width:64ch}
+.svfoot{display:flex;gap:9px;padding:16px 24px;border-top:1px solid var(--line);align-items:center;flex-wrap:wrap}
+.btn{font-size:13px;font-weight:600;border:1px solid var(--cyan);background:var(--cyan);color:#04121f;
+  padding:10px 18px;border-radius:9px;cursor:pointer;transition:.16s;font-family:var(--f-body)}
+html[data-theme="light"] .btn{color:#fff}
+.btn:hover{filter:brightness(1.12)}
+.btn.ghost{background:transparent;color:var(--text-2);border-color:var(--line-2)}
+.btn.ghost:hover{color:var(--text);border-color:var(--text-3);filter:none}
+.btn:disabled{opacity:.32;cursor:not-allowed;filter:none}
+.svres{display:none}
+.svres.on{display:block}
+.alignbar{height:30px;border-radius:9px;background:var(--track);overflow:hidden;position:relative;margin:16px 0 8px}
+.alignbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--violet));transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.alignbar span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+
+/* ================= RECOMMENDATIONS ================= */
+.recs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.rec{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.24s}
+.rec:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.rec .rh{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+.rec .ix{font-family:var(--f-disp);font-weight:800;font-size:15px;letter-spacing:-.03em;
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex:none;
+  background:var(--surface-3);color:var(--cyan);border:1px solid var(--line-2)}
+.rec h4{font-size:15.5px;flex:1}
+.rec p{font-size:14px;line-height:1.55;color:var(--text-2);margin:0}
+.rec .pill{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+  border-radius:100px;padding:4px 9px;border:1px solid var(--line-2);color:var(--text-3);white-space:nowrap;margin-top:13px;display:inline-block}
+.rec .pill.hi{border-color:var(--green);color:var(--green)}
+
+.finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.find{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+.find .v{font-family:var(--f-disp);font-weight:800;font-size:38px;letter-spacing:-.05em;line-height:1;display:block;margin-bottom:11px;
+  background:linear-gradient(140deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.find p{font-size:13.5px;line-height:1.5;color:var(--text-2);margin:0}
+
+.limits{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 14px 14px 0;padding:26px}
+.limits ul{margin:14px 0 0;padding-left:19px;font-size:14.5px;line-height:1.7;color:var(--text-2)}
+.concl{position:relative;background:linear-gradient(150deg,color-mix(in srgb,var(--cyan) 13%,var(--surface)),var(--surface));
+  border:1px solid var(--cyan);border-radius:16px;padding:32px;box-shadow:var(--glow)}
+
+/* ================= APPENDIX ================= */
+details.acc{border:1px solid var(--line);border-radius:14px;background:var(--surface);margin-bottom:10px;overflow:hidden}
+details.acc summary{cursor:pointer;padding:19px 22px;list-style:none;display:flex;align-items:center;gap:14px;
+  font-family:var(--f-disp);font-weight:600;font-size:16.5px;letter-spacing:-.018em}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"";margin-left:auto;width:9px;height:9px;border-right:2px solid var(--text-3);
+  border-bottom:2px solid var(--text-3);transform:rotate(45deg);transition:transform .25s;flex:none}
+details.acc[open] summary::after{transform:rotate(-135deg)}
+details.acc summary:hover{color:var(--cyan)}
+details.acc .ab{padding:0 22px 24px;font-size:14.5px;line-height:1.65;color:var(--text-2)}
+.reflist div{padding-left:26px;text-indent:-26px;margin-bottom:11px}
+.reflist b{color:var(--text)}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:10px}
+.gloss div{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.gloss dt{font-family:var(--f-disp);font-weight:700;font-size:14px;color:var(--cyan);letter-spacing:-.01em}
+.gloss dd{margin:5px 0 0;font-size:13px;line-height:1.5;color:var(--text-2)}
+.prof{width:100%;border-collapse:collapse;font-size:14.5px}
+.prof th{text-align:left;vertical-align:top;padding:12px 18px 12px 0;width:190px;font-family:var(--f-mono);font-size:9.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);border-bottom:1px solid var(--line);font-weight:400}
+.prof td{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.55}
+@media(max-width:600px){.prof th{width:auto;display:block;border:0;padding-bottom:3px}.prof td{display:block;padding-top:0}}
+
+.qbox{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.qbox span{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line-2);padding:6px 11px;border-radius:100px;color:var(--text-3)}
+
+/* glossary term */
+.term{border:0;background:none;padding:0;font:inherit;color:var(--cyan);cursor:help;
+  border-bottom:1px dashed color-mix(in srgb,var(--cyan) 55%,transparent)}
+.term:hover{border-bottom-style:solid}
+#tip{position:fixed;z-index:200;max-width:280px;background:var(--surface-3);color:var(--text);
+  border:1px solid var(--line-2);padding:11px 14px;border-radius:10px;font-size:13px;line-height:1.5;
+  opacity:0;pointer-events:none;transition:opacity .15s;box-shadow:var(--shadow)}
+#tip.on{opacity:1}
+
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--line);background:var(--bg-2);padding:60px 0 40px;position:relative;z-index:1}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px;margin-bottom:36px}
+footer h4{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:13px;font-weight:400}
+footer p,footer li{font-size:14px;line-height:1.6;color:var(--text-2)}
+footer ul{margin:0;padding:0;list-style:none}
+footer ul a{text-decoration:none;color:var(--text-2)}
+footer ul a:hover{color:var(--cyan)}
+.signoff{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ================= COMMAND PALETTE ================= */
+.cmdk{position:fixed;inset:0;z-index:300;display:none;background:rgba(4,9,20,.6);
+  backdrop-filter:blur(5px);align-items:flex-start;justify-content:center;padding:12vh 20px 20px}
+.cmdk.on{display:flex}
+.cbox{width:100%;max-width:580px;background:var(--surface);border:1px solid var(--line-2);
+  border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
+.cbox input{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;
+  padding:18px 20px;font-family:var(--f-body);font-size:15px;color:var(--text);outline:none}
+.cbox input::placeholder{color:var(--text-3)}
+.clist{max-height:46vh;overflow-y:auto;padding:8px}
+.clist button{display:flex;width:100%;gap:12px;align-items:center;text-align:left;background:transparent;
+  border:0;padding:11px 13px;border-radius:9px;cursor:pointer;font:inherit;font-size:14.5px;color:var(--text)}
+.clist button .kind{font-family:var(--f-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-left:auto}
+.clist button.sel,.clist button:hover{background:var(--surface-3)}
+.clist button.sel{box-shadow:inset 0 0 0 1px var(--cyan)}
+.cfoot2{padding:11px 16px;border-top:1px solid var(--line);display:flex;gap:16px;flex-wrap:wrap}
+.cfoot2 span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3)}
+kbd{font-family:var(--f-mono);font-size:9.5px;border:1px solid var(--line-2);border-bottom-width:2px;
+  border-radius:5px;padding:2px 6px;color:var(--text-2)}
+
+/* ================= OPERATIONS LIFECYCLE ================= */
+.lockup{display:flex;align-items:center;gap:18px;margin-bottom:30px}
+.lockup svg{width:64px;height:64px;flex:none}
+.lockup .wm{font-family:var(--f-disp);font-weight:600;font-size:clamp(24px,3vw,34px);letter-spacing:-.03em;line-height:1}
+.lockup .wm small{display:block;font-family:var(--f-body);font-weight:400;font-size:.46em;letter-spacing:-.005em;color:var(--text-2);margin-top:5px}
+.mkstroke{fill:none;stroke:var(--blue);stroke-width:6.5;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.5s cubic-bezier(.5,0,.2,1)}
+.in .mkstroke{stroke-dashoffset:0}
+.lockup.glow svg{filter:drop-shadow(0 0 14px rgba(96,165,250,.45))}
+
+.clients{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:40px}
+.clients .cl{
+  font-family:var(--f-disp);font-weight:600;font-size:15px;letter-spacing:-.01em;
+  border:1px solid var(--line-2);border-radius:10px;padding:9px 17px;color:var(--text-2);
+  background:var(--surface);transition:.22s;
+}
+.clients .cl:hover{color:var(--cyan);border-color:var(--cyan);box-shadow:var(--glow)}
+
+/* pipeline shell */
+.pipe{
+  position:relative;background:linear-gradient(165deg,var(--surface-2),var(--surface));
+  border:1px solid var(--line-2);border-radius:20px;padding:30px 26px 24px;overflow:hidden;margin-bottom:18px;
+}
+.pipe::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top)}
+.pipe .ph{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+.pipe .ph h3{flex:1;min-width:230px}
+/* radial hub */
+.hubstage{position:relative;width:100%;max-width:900px;margin:0 auto;height:clamp(430px,44vw,600px)}
+.hubstage svg.spokes{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.spoke{stroke:var(--line-2);stroke-width:1.4;stroke-dasharray:3 6;fill:none;transition:stroke .4s ease,stroke-width .4s ease}
+.spoke.on{stroke:var(--violet);stroke-width:1.8;stroke-dasharray:none;
+  filter:drop-shadow(0 0 6px color-mix(in srgb,var(--violet) 80%,transparent))}
+.pdot{fill:var(--cyan);filter:drop-shadow(0 0 7px var(--cyan));opacity:0;offset-rotate:0deg}
+.pdot.run{opacity:1;animation:travel 1.6s ease-out}
+@keyframes travel{0%{offset-distance:0%;opacity:0}12%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
+.hub{position:absolute;top:50%;left:50%;width:114px;height:114px;transform:translate(-50%,-50%);
+  border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--surface-3),var(--surface));
+  border:1px solid var(--line-2);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--violet) 7%,transparent),0 0 36px color-mix(in srgb,var(--cyan) 20%,transparent)}
+.hub::before{content:"";position:absolute;inset:-10px;border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--violet) 32%,transparent);animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+.hub .hn{font-family:var(--f-disp);font-weight:800;font-size:34px;line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hub .hl{font-family:var(--f-mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3);margin-top:5px}
+.hnode{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;
+  gap:8px;width:88px;z-index:4;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;transition:transform .3s ease}
+.hnode:hover{transform:translate(-50%,-50%) scale(1.06)}
+.hbadge{position:relative;width:48px;height:48px;border-radius:50%;background:var(--surface);
+  border:1px solid var(--line-2);display:grid;place-items:center;transition:all .4s ease}
+.hbadge svg{width:21px;height:21px;stroke:var(--text-3);fill:none;stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s ease}
+.hlab{font-size:11.5px;line-height:1.3;color:var(--text-3);text-align:center;transition:color .4s ease}
+.hnode .dot{position:absolute;top:-3px;right:-3px;width:15px;height:15px;border-radius:50%;
+  background:var(--cyan);color:#04121f;font-family:var(--f-mono);font-size:8.5px;
+  display:none;align-items:center;justify-content:center;box-shadow:0 0 8px var(--cyan)}
+.hnode.on .hbadge{border-color:var(--cyan);background:radial-gradient(circle at 35% 30%,var(--surface-3),var(--surface));
+  box-shadow:0 0 22px color-mix(in srgb,var(--cyan) 38%,transparent)}
+.hnode.on .hbadge svg{stroke:url(#hubGrad)}
+.hnode.on .hlab{color:var(--text);font-weight:500}
+.hnode.on .dot{display:flex}
+.hcap{text-align:center;max-width:620px;margin:4px auto 0;min-height:70px}
+.hcap .ht{display:inline-block;margin-bottom:10px;font-family:var(--f-mono);font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
+  border:1px solid color-mix(in srgb,var(--cyan) 34%,transparent);border-radius:100px;padding:4px 12px}
+.hcap .hx{font-size:15px;line-height:1.55;color:var(--text-2)}
+.hcap .hx b{color:var(--text);font-weight:600}
+@media(max-width:760px){
+  .hubstage{height:clamp(400px,104vw,470px)}
+  .hnode{width:70px;gap:6px}
+  .hbadge{width:40px;height:40px}
+  .hbadge svg{width:18px;height:18px}
+  .hlab{font-size:10px}
+  .hub{width:96px;height:96px}
+  .hub .hn{font-size:28px}
+}
+@media(max-width:620px){
+  /* labels are dropped so the ring can breathe — the caption names the active stage */
+  .hubstage{height:clamp(300px,88vw,390px)}
+  .hnode{width:auto}
+  .hlab{display:none}
+  .hbadge{width:42px;height:42px}
+  .hub{width:88px;height:88px}
+  .hub .hn{font-size:26px}
+  .hcap{min-height:96px}
+  .pipe{padding:24px 18px 20px}
+}
+.pipe .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.pipe .legend span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3)}
+
+/* stage stepper */
+.stages{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+@media(max-width:900px){.stages{grid-template-columns:1fr}}
+.stagelist{display:flex;flex-direction:column;gap:6px}
+.stagelist button{
+  display:flex;align-items:center;gap:13px;text-align:left;font:inherit;font-size:14.5px;
+  background:var(--surface);border:1px solid var(--line);color:var(--text-2);
+  border-radius:12px;padding:13px 15px;cursor:pointer;transition:.2s;
+}
+.stagelist button:hover{border-color:var(--line-2);color:var(--text)}
+.stagelist button[aria-selected="true"]{border-color:var(--cyan);color:var(--text);background:var(--surface-2);box-shadow:var(--glow)}
+.stagelist button .sn{
+  font-family:var(--f-mono);font-size:10px;width:26px;height:26px;flex:none;border-radius:8px;
+  display:grid;place-items:center;background:var(--surface-3);border:1px solid var(--line-2);color:var(--text-3);transition:.2s;
+}
+.stagelist button[aria-selected="true"] .sn{background:var(--cyan);border-color:var(--cyan);color:#04121f}
+html[data-theme="light"] .stagelist button[aria-selected="true"] .sn{color:#fff}
+.stagepanel{
+  position:relative;background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:28px;min-height:326px;overflow:hidden;
+}
+.stagepanel::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--card-top)}
+.stagepanel .pn{font-family:var(--f-mono);font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.stagepanel h3{margin-bottom:16px}
+.stagepanel ul{margin:0;padding:0;list-style:none}
+.stagepanel li{
+  position:relative;padding:0 0 0 28px;margin-bottom:13px;font-size:15px;line-height:1.55;color:var(--text-2);
+  opacity:0;transform:translateX(-8px);animation:liIn .45s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes liIn{to{opacity:1;transform:none}}
+.stagepanel li::before{
+  content:"";position:absolute;left:5px;top:9px;width:7px;height:7px;border-radius:2px;
+  background:linear-gradient(140deg,var(--cyan),var(--violet));
+}
+.stagepanel .sub{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.stagepanel .sub span{font-family:var(--f-mono);font-size:10.5px;border:1px solid var(--line-2);
+  padding:5px 10px;border-radius:100px;color:var(--text-3)}
+.stagepanel .sub span.hot{border-color:var(--green);color:var(--green)}
+.stageprog{display:flex;gap:5px;margin-top:22px}
+.stageprog i{height:3px;flex:1;border-radius:2px;background:var(--track);transition:background .3s}
+.stageprog i.on{background:linear-gradient(90deg,var(--cyan),var(--violet))}
+@media(prefers-reduced-motion:reduce){
+  .stagepanel li{opacity:1;transform:none;animation:none}
+  .mkstroke{stroke-dashoffset:0;transition:none}
+  .pdot,.hub::before{animation:none!important}
+}
+
+/* ================= PRINT ================= */
+@media print{
+  nav.top,.progress,.field,.cmdk,.ctools,.svfoot,.presets,.chips{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{padding:20px 0;page-break-inside:avoid}
+  .card,.chart,.feature,.gauge,.survey{border-color:#ccc;background:#fff;box-shadow:none}
+}
+
+</style>
+</head>
+<body>
+<div class="field" aria-hidden="true">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="grid"></div>
+</div>
+<div id="tip" role="tooltip"></div>
+<div class="progress" id="prog"></div>
+
+<nav class="top">
+  <div class="inner">
+    <div class="logo"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" width="16" height="16"><path d="M50 9 C 44 41, 28 67, 10 92 C 34 82, 62 68, 86 46" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><path d="M50 9 C 56 41, 72 67, 90 92 C 66 82, 38 68, 14 46" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg></span> Smart Metering Adoption</div>
+    <div class="navlinks" id="navlinks">
+      <a href="#overview" data-s="overview">Overview</a>
+      <a href="#context" data-s="context">Context</a>
+      <a href="#operations" data-s="operations">Operations</a>
+      <a href="#framework" data-s="framework">Framework</a>
+      <a href="#method" data-s="method">Method</a>
+      <a href="#data" data-s="data">Data</a>
+      <a href="#mix" data-s="mix">Channel Mix</a>
+      <a href="#findings" data-s="findings">Findings</a>
+      <a href="#survey" data-s="survey">Survey</a>
+      <a href="#appendix" data-s="appendix">Appendix</a>
+    </div>
+    <div class="navbtns">
+      <button class="iconbtn menubtn" id="menuBtn" aria-label="Menu">≡</button>
+      <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">◐</button>
+      <button class="iconbtn" id="findBtn" aria-label="Search" title="Search (K)">⌕</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="overview">
+  <div class="wrap">
+    <div class="eyeline">
+      <span>Research Project</span><span>·</span><span>BBA Marketing</span><span>·</span>
+      <span>2025–26</span><span>·</span><b>n = 100</b>
+    </div>
+    <h1>Digital marketing is now the <span class="hl">deciding factor</span> in smart meter adoption</h1>
+    <p class="lede">India is installing millions of smart meters. The hardware is the easy part. This study surveyed 100 consumers on a live deployment supported by Awign Enterprises to measure how digital communication shaped their awareness, perception, trust and willingness to adopt.</p>
+    <div class="byline">
+      <span class="chip"><b>Shreyas R</b> · USN 232VBBNR0342</span>
+      <span class="chip">Jain <b>(Deemed-to-be University)</b></span>
+      <span class="chip">Case org: <b>Awign Enterprises Pvt. Ltd.</b></span>
+      <span class="chip">Descriptive · <b>Convenience sample</b></span>
+    </div>
+
+    <div class="kpis rv" id="kpis">
+      <div class="kpi"><span class="lab">Aware of smart meters</span><span class="val" data-c="82">0</span><span class="suf">%</span><span class="sub">82 of 100 had heard of the technology before the field team arrived.</span><span class="track"><i data-w="82"></i></span></div>
+      <div class="kpi"><span class="lab">First heard via a digital channel</span><span class="val" data-c="60">0</span><span class="suf">%</span><span class="sub">Social media plus WhatsApp — over three times the electricity department.</span><span class="track"><i data-w="60"></i></span></div>
+      <div class="kpi"><span class="lab">Satisfaction with digital comms</span><span class="val" data-c="3.91" data-d="2">0</span><span class="suf">/5</span><span class="sub">Weighted mean. 74% satisfied or highly satisfied.</span><span class="track"><i data-w="78"></i></span></div>
+      <div class="kpi"><span class="lab">Trust the technology</span><span class="val" data-c="76">0</span><span class="suf">%</span><span class="sub">A quarter still held reservations further outreach could address.</span><span class="track"><i data-w="76"></i></span></div>
+      <div class="kpi"><span class="lab">Rated the campaign good or better</span><span class="val" data-c="70">0</span><span class="suf">%</span><span class="sub">Weighted mean 2.81 on the four-point rating scale.</span><span class="track"><i data-w="70"></i></span></div>
+    </div>
+
+    <div class="grid g2 rv" style="margin-top:16px">
+      <div class="card hov">
+        <h4>Abstract</h4>
+        <p class="tiny">A descriptive, quantitative design. Primary data from 100 consumers through a structured 15-item questionnaire, analysed with frequency distribution, percentage analysis and weighted mean scores, supported by company reports, government publications and academic literature. WhatsApp and social media were the most influential channels; awareness and trust were high among those surveyed; greater satisfaction with digital communication went with a more favourable overall assessment.</p>
+      </div>
+      <div class="card hov" style="border-color:var(--amber)">
+        <h4 style="color:var(--amber)">How to read these numbers</h4>
+        <p class="tiny">The sample was non-probability and limited to a single project. Every figure on this page is <b>indicative of the 100 people surveyed</b>, not generalisable to India's electricity consumers. Relationships are reported as observed associations within this sample, not as demonstrated cause and effect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 01 CONTEXT ================= -->
+<section id="context">
+  <div class="wrap">
+    <div class="secno">01 — Context</div>
+    <div class="sechead rv">
+      <span class="tag">Chapter 1 · Introduction</span>
+      <h2>The meter goes up in three hours. Trust takes longer.</h2>
+      <p class="lede">Adoption, not installation, is the constraint — and communication is what moves it.</p>
+    </div>
+
+    <div class="grid g2 rv" style="margin-bottom:44px">
+      <div>
+        <p class="muted">To improve transparency, cut power losses and raise customer satisfaction, the Government of India introduced the Smart Meter National Programme under the <button class="term" data-t="RDSS">RDSS</button>. Smart meters allow real-time monitoring of consumption, accurate billing, remote disconnection and reconnection, and better energy efficiency.</p>
+        <p class="muted">Adoption is the harder problem. Many consumers have never heard of the technology, or hold firm misconceptions about billing accuracy, privacy and installation cost. Educating them has become a precondition for successful implementation — and digital marketing, through social media, websites, apps, email, SMS, video and WhatsApp, is how that education now travels.</p>
+      </div>
+      <div>
+        <p class="muted">Awign Enterprises Pvt. Ltd. is a technology-enabled workforce-solutions company that executes smart-meter installation projects through field operations, workforce deployment and consumer-engagement activity. Alongside operational delivery, its communication and awareness campaigns materially shape project outcomes.</p>
+        <p class="muted">That makes it an unusual vantage point. Most research on smart metering looks at the grid, the technology or the policy. This study looks from the position of the implementation partner — the people knocking on the door — and asks what the messaging actually did.</p>
+      </div>
+    </div>
+
+    <h3 class="rv" style="margin-bottom:6px">Operating environment</h3>
+    <p class="tiny rv" style="margin-bottom:20px">PESTEL scan — select a factor to expand.</p>
+    <div class="pestel rv" id="pestel">
+      <button aria-expanded="true"><span class="l">P</span><p class="n">Political</p><p class="t">Backed by the SMNP, the RDSS and the wider Digital India agenda. Programme continuity depends on policy continuity.</p></button>
+      <button aria-expanded="false"><span class="l">E</span><p class="n">Economic</p><p class="t">Meters lower operational cost and are supported by government funding, against a background of rising electricity demand.</p></button>
+      <button aria-expanded="false"><span class="l">S</span><p class="n">Social</p><p class="t">Outcomes hinge on consumer awareness, digital literacy and public perception — the variables this study measures.</p></button>
+      <button aria-expanded="false"><span class="l">T</span><p class="n">Technological</p><p class="t">The Internet of Things, cloud computing and smart-grid systems underpin what the meter can actually do.</p></button>
+      <button aria-expanded="false"><span class="l">E</span><p class="n">Environmental</p><p class="t">Supports energy conservation and lower emissions through visible, real-time consumption data.</p></button>
+      <button aria-expanded="false"><span class="l">L</span><p class="n">Legal</p><p class="t">Shaped by the Electricity Act, data-privacy rules, consumer-protection law and installation guidelines.</p></button>
+    </div>
+
+    <h3 class="rv" style="margin:48px 0 6px">Strategic position</h3>
+    <p class="tiny rv" style="margin-bottom:20px">SWOT — digital marketing acts directly on the human-facing quadrants, converting resistance and misconception into awareness and trust.</p>
+    <div class="swot rv">
+      <div class="q s"><h4>Strengths</h4><div class="ax">Internal · Helpful</div><ul><li>Government backing</li><li>Accurate billing</li><li>Real-time monitoring</li><li>Reduced power theft</li><li>More efficient customer service</li></ul></div>
+      <div class="q w"><h4>Weaknesses</h4><div class="ax">Internal · Harmful</div><ul><li>Consumer resistance</li><li>Initial installation cost</li><li>Digital-literacy gaps</li><li>Network dependency</li></ul></div>
+      <div class="q o"><h4>Opportunities</h4><div class="ax">External · Helpful</div><ul><li>Smart City Mission</li><li>Renewable-energy integration</li><li>Nationwide expansion</li><li>Advanced digital services</li></ul></div>
+      <div class="q t"><h4>Threats</h4><div class="ax">External · Harmful</div><ul><li>Cybersecurity risk</li><li>Persistent misconceptions</li><li>Infrastructure limitations</li><li>Policy change</li></ul></div>
+    </div>
+
+    <div class="grid g2 rv" style="margin-top:16px">
+      <div class="card hov" style="border-color:var(--cyan)">
+        <h4>Problem statement</h4>
+        <p class="tiny">Smart-meter technology offers clear operational and consumer benefits, yet implementation is hindered by limited awareness, resistance to change, and misconceptions about billing accuracy and privacy. Digital marketing offers a way to bridge that gap — but its effectiveness in influencing adoption remains insufficiently explored within India's smart-metering ecosystem, and almost unexplored from the perspective of a workforce-implementation partner.</p>
+      </div>
+      <div class="card hov">
+        <h4>Objectives</h4>
+        <p class="tiny" style="margin-bottom:10px"><b>Primary —</b> to study the effectiveness of digital-marketing strategies in promoting smart-meter adoption.</p>
+        <ol class="tiny" style="margin:0;padding-left:19px;line-height:1.75">
+          <li>Evaluate consumer awareness regarding smart meters</li>
+          <li>Identify the most effective digital-marketing channels</li>
+          <li>Analyse consumer perception towards the technology</li>
+          <li>Understand challenges faced during implementation</li>
+          <li>Recommend strategies to improve engagement and adoption</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 OPERATIONS ================= -->
+<section id="operations">
+  <div class="wrap">
+    <div class="secno">02 — Operations</div>
+
+    <div class="sechead rv">
+      <div class="lockup glow">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Smart Metering by Awign">
+          <path class="mkstroke" d="M50 9 C 44 41, 28 67, 10 92 C 34 82, 62 68, 86 46"/>
+          <path class="mkstroke" style="transition-delay:.25s" d="M50 9 C 56 41, 72 67, 90 92 C 66 82, 38 68, 14 46"/>
+        </svg>
+        <div class="wm">Smart Metering<small>by Awign — project operations</small></div>
+      </div>
+      <span class="tag">Case organisation · Field execution</span>
+      <h2>The lifecycle behind every meter on a wall</h2>
+      <p class="lede">Before any consumer sees a campaign, a project has to be scoped, staffed, verified and deployed. This is the operational lifecycle Awign manages for clients in smart metering — the system the communication studied in this report sits inside.</p>
+    </div>
+
+    <div class="clients rv">
+      <span class="mono" style="color:var(--text-3);margin-right:6px">Clients served</span>
+      <span class="cl">GMR</span><span class="cl">HPL</span><span class="cl">Bentec</span>
+      <span class="cl">Polaris</span><span class="cl">Genus</span>
+    </div>
+
+    <div class="pipe rv" id="pipe">
+      <div class="ph">
+        <div style="flex:1;min-width:230px">
+          <span class="mono" style="color:var(--cyan);display:block;margin-bottom:9px">End-to-end workflow</span>
+          <h3>Nine stages, orbiting one delivery hub</h3>
+        </div>
+        <div style="text-align:right">
+          <div class="num" style="font-size:38px;line-height:1;background:linear-gradient(140deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent">09</div>
+          <span class="mono" style="color:var(--text-3);display:block;margin-top:5px">Sequential stages</span>
+        </div>
+      </div>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+        <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--cyan)"/><stop offset="100%" stop-color="var(--violet)"/>
+        </linearGradient></defs></svg>
+      <div class="hubstage" id="hubStage">
+        <svg class="spokes" id="hubSpokes"></svg>
+        <div class="hub"><div class="hn" id="hubNum">1</div><div class="hl">Stage</div></div>
+        <div id="hubNodes"></div>
+      </div>
+      <div class="hcap">
+        <div class="ht" id="hubTag">Stage 01</div>
+        <div class="hx" id="hubTxt"></div>
+      </div>
+      <div class="legend">
+        <span>● Live sequence — select any stage, or let it cycle</span>
+        <span>Managed by Awign as workforce &amp; execution partner</span>
+      </div>
+    </div>
+
+    <div class="card hov rv" style="border-color:var(--green);margin-bottom:36px">
+      <h4 style="color:var(--green)">Where this meets the research</h4>
+      <p class="tiny">WhatsApp appears twice in this project, on both sides of the operation. It is the leading channel Awign uses to <b>recruit local technicians</b> at stage three, and it is also the channel <b>31% of consumers named as most influential</b> in Table 4.6. The same messaging infrastructure that staffs the project is the one that persuades the household — a point worth making explicitly in Chapter 5.</p>
+    </div>
+
+    <h3 class="rv" style="margin-bottom:6px">Project manager responsibilities</h3>
+    <p class="tiny rv" style="margin-bottom:22px">Seven areas of ownership across the lifecycle. Select one to expand.</p>
+
+    <div class="stages rv">
+      <div class="stagelist" id="stageList" role="tablist" aria-label="Project manager responsibilities"></div>
+      <div class="stagepanel" id="stagePanel" role="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 FRAMEWORK ================= -->
+<section id="framework">
+  <div class="wrap">
+    <div class="secno">03 — Framework</div>
+    <div class="sechead rv">
+      <span class="tag">Chapter 2 · Literature</span>
+      <h2>Three established models, one new box on the wall</h2>
+      <p class="lede">Adoption theory is settled. What isn't settled is how it behaves when the innovation arrives on a government schedule, installed by a contractor, on a wall the consumer didn't choose.</p>
+    </div>
+
+    <div class="grid g3 rv" style="margin-bottom:48px">
+      <div class="theory"><div class="ab">TAM</div><div class="sr">Davis, 1989</div><p>Adoption turns chiefly on perceived usefulness and perceived ease of use. Accurate bills, better monitoring and fewer complaints raise usefulness; clear, simple awareness campaigns raise ease of use.</p></div>
+      <div class="theory"><div class="ab">DOI</div><div class="sr">Rogers, 2003</div><p>Innovations spread through innovators, early adopters, the early and late majorities, and laggards. Testimonials, videos and demonstrations accelerate movement between categories.</p></div>
+      <div class="theory"><div class="ab">AIDA</div><div class="sr">Attention · Interest · Desire · Action</div><p>Ads and social capture attention; educational video builds interest; recognised benefits create desire; understanding ends in action — agreeing to installation.</p></div>
+    </div>
+
+    <h3 class="rv" style="margin-bottom:6px">Conceptual framework</h3>
+    <p class="tiny rv" style="margin-bottom:20px">Digital-marketing activity is the independent variable; consumer adoption is the dependent variable. The relationship is examined descriptively — as association within this sample, not demonstrated cause.</p>
+    <div class="flow rv">
+      <div class="fnode"><span class="st">Input</span><h4>Digital-marketing activity</h4><p>Social campaigns, WhatsApp broadcast, SMS alerts, video demonstrations, website information, awareness programmes.</p><span class="vb">Independent variable</span></div>
+      <div class="fnode"><span class="st">Stage 01</span><h4>Consumer awareness</h4><p>The consumer knows the meter exists, what it does, and what happens on installation day.</p></div>
+      <div class="fnode"><span class="st">Stage 02</span><h4>Trust &amp; knowledge</h4><p>Concerns about billing accuracy, privacy and cost are answered before the technician knocks.</p></div>
+      <div class="fnode"><span class="st">Stage 03</span><h4>Positive attitude</h4><p>Perception shifts from something being done to them to something being done for them.</p></div>
+      <div class="fnode"><span class="st">Outcome</span><h4>Willingness to adopt</h4><p>Acceptance, satisfaction, and willingness to recommend the technology to others.</p><span class="vb">Dependent variable</span></div>
+    </div>
+
+    <div class="card hov rv" style="margin-top:16px">
+      <h4>Research gap</h4>
+      <p class="tiny">Existing literature concentrates on smart-grid technology, energy management, technical performance, government initiatives and general consumer behaviour. Comparatively little addresses the effectiveness of digital marketing specifically in smart-meter adoption, the role of workforce-implementation partners, or the integration of online and offline awareness campaigns inside public-utility projects.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 METHOD ================= -->
+<section id="method">
+  <div class="wrap">
+    <div class="secno">04 — Method</div>
+    <div class="sechead rv">
+      <span class="tag">Chapter 3 · Methodology</span>
+      <h2>How the data was collected</h2>
+    </div>
+    <div class="grid g4 rv" style="margin-bottom:16px">
+      <div class="card hov"><span class="mono" style="color:var(--text-3)">Design</span><h4 style="margin:10px 0 8px;font-size:20px">Descriptive</h4><p class="tiny">Quantitative and applied. Characterises and compares responses; makes no causal claim.</p></div>
+      <div class="card hov"><span class="mono" style="color:var(--text-3)">Sample</span><h4 style="margin:10px 0 8px;font-size:20px">n = 100</h4><p class="tiny">Residential and commercial consumers at active project locations.</p></div>
+      <div class="card hov"><span class="mono" style="color:var(--text-3)">Sampling</span><h4 style="margin:10px 0 8px;font-size:20px">Convenience</h4><p class="tiny">Non-probability. Efficient for descriptive work; limits generalisability.</p></div>
+      <div class="card hov"><span class="mono" style="color:var(--text-3)">Instrument</span><h4 style="margin:10px 0 8px;font-size:20px">15 items</h4><p class="tiny">Two sections. Multiple-choice, yes/no and five-point Likert formats.</p></div>
+    </div>
+    <div class="grid g2 rv">
+      <div class="card hov"><h4>Why 100 respondents</h4><p class="tiny">As a rough guide, a 95% confidence level with a ±10% margin of error implies a minimum of about 96 respondents for a large population. A sample of 100 meets that indicative threshold for descriptive analysis — while remaining, because it was drawn by convenience, a description of the people surveyed rather than an estimate of a wider population.</p></div>
+      <div class="card hov"><h4>Analytical tools</h4><p class="tiny">Frequency distribution and percentage analysis for categorical items; weighted mean scores for the Likert items, summarising each attitude statement on its scale. Every questionnaire item maps to a table in Chapter 4, and every table maps back to an item.</p></div>
+      <div class="card hov"><h4>Reliability &amp; validity</h4><p class="tiny">Reliability supported by a standardised questionnaire with simple, clearly worded items, voluntary participation and a completeness check before analysis. Validity supported by aligning questions to the objectives, grounding the instrument in the reviewed literature and adoption models, and collecting directly from consumers.</p></div>
+      <div class="card hov"><h4>Ethics</h4><p class="tiny">Participation was voluntary and informed. Personal information was kept confidential and the data used only for academic purposes. No respondent is identifiable anywhere in the study or on this page.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 DATA ================= -->
+<section id="data">
+  <div class="wrap">
+    <div class="secno">05 — Data</div>
+    <div class="sechead rv">
+      <span class="tag">Chapter 4 · Analysis</span>
+      <h2>Twelve tables, one hundred people</h2>
+      <p class="lede">Every figure is the original table from the study. Switch any of them to the underlying table, or export the numbers.</p>
+    </div>
+
+    <div class="feature rv" style="margin-bottom:36px">
+      <div class="fhead">
+        <div style="flex:1;min-width:240px">
+          <span class="mono" style="color:var(--cyan);display:block;margin-bottom:9px">Table 4.6 · Headline finding</span>
+          <h3>Which digital channel influenced consumers most</h3>
+        </div>
+        <div style="text-align:right">
+          <div class="num" style="font-size:44px;line-height:1;background:linear-gradient(140deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent">31%</div>
+          <span class="mono" style="color:var(--text-3);display:block;margin-top:6px">WhatsApp leads</span>
+        </div>
+      </div>
+      <div class="bigbars" id="bigbars"></div>
+      <p class="tiny" style="margin-top:26px;padding-top:20px;border-top:1px solid var(--line)">WhatsApp was named most influential by <b>31%</b> of respondents, ahead of Facebook at 22%. Messaging and social together outweighed SMS and the project website combined. These proportions become the channel weights used in the planning tool below.</p>
+    </div>
+
+    <div class="chips rv">
+      <button class="fchip" data-g="all" aria-pressed="true">All figures</button>
+      <button class="fchip" data-g="profile" aria-pressed="false">Respondent profile</button>
+      <button class="fchip" data-g="reach" aria-pressed="false">Reach &amp; channels</button>
+      <button class="fchip" data-g="attitude" aria-pressed="false">Attitude &amp; trust</button>
+    </div>
+
+    <div class="charts" id="charts"></div>
+
+    <h3 class="rv" style="margin:52px 0 20px">Key findings</h3>
+    <div class="finds rv">
+      <div class="find"><span class="v">82%</span><p>were aware of smart meters before the awareness campaign reached them.</p></div>
+      <div class="find"><span class="v">37%</span><p>fell in the 26–35 age band — the largest single respondent segment.</p></div>
+      <div class="find"><span class="v">60%</span><p>first heard through social media or WhatsApp combined.</p></div>
+      <div class="find"><span class="v">31%</span><p>named WhatsApp as the single most influential channel.</p></div>
+      <div class="find"><span class="v">3.91</span><p>weighted mean satisfaction with digital communication, out of 5.</p></div>
+      <div class="find"><span class="v">3.80</span><p>weighted mean perception of smart meters, out of 5.</p></div>
+      <div class="find"><span class="v">40%</span><p>valued accurate billing above every other benefit.</p></div>
+      <div class="find"><span class="v">79%</span><p>would recommend smart meters to someone else.</p></div>
+      <div class="find"><span class="v">2.81</span><p>weighted mean campaign rating, out of 4 — between average and good.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 CHANNEL MIX ================= -->
+<section id="mix">
+  <div class="wrap">
+    <div class="secno">06 — Planning tool</div>
+    <div class="sechead rv">
+      <span class="tag">Interactive · derived from Table 4.6</span>
+      <h2>Channel mix planner</h2>
+      <p class="lede">Allocate a hundred points of campaign effort across the five channels and see how the mix scores against the influence weights this study observed.</p>
+    </div>
+
+    <div class="sim rv">
+      <div class="card">
+        <div class="presets">
+          <span class="mono" style="color:var(--text-3);align-self:center;margin-right:4px">Presets</span>
+          <button data-p="observed">Observed mix</button>
+          <button data-p="even">Even split</button>
+          <button data-p="whatsapp">WhatsApp only</button>
+          <button data-p="legacy">Legacy comms</button>
+          <button data-p="optimal">Best possible</button>
+        </div>
+        <div id="slrows"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line)">
+          <span class="mono" style="color:var(--text-3)">Points allocated</span>
+          <span class="num" id="mixTotal" style="font-size:21px">100</span>
+        </div>
+        <div class="toggles">
+          <label class="tgl"><input type="checkbox" id="tField" checked><span class="bx"></span>Trained field teams</label>
+          <label class="tgl"><input type="checkbox" id="tLang"><span class="bx"></span>Regional-language content</label>
+          <label class="tgl"><input type="checkbox" id="tVideo"><span class="bx"></span>Video-led explainers</label>
+        </div>
+      </div>
+
+      <div class="gauge">
+        <div class="top">
+          <div class="idx" id="simIdx">00</div>
+          <div class="cap">Projected influence index</div>
+          <div class="meter"><i id="simMeter"></i></div>
+          <div class="vd" id="simVd">—</div>
+        </div>
+        <div class="rows" id="simRows"></div>
+      </div>
+    </div>
+
+    <div class="grid g2 rv" style="margin-top:16px">
+      <div class="card hov">
+        <h4>How the index works</h4>
+        <p class="tiny">Each channel carries a weight equal to its share of Table 4.6, normalised so WhatsApp — named by 31% as most influential — sits at 1.00. A channel's contribution is its weight multiplied by its share raised to the power 0.6, so the tenth point spent on a channel is worth less than the first. That penalises concentration, matching Chapter 5's finding that integrated communication outperformed any single channel. Your board is then scored against the best possible split of the same hundred points. The three toggles apply the study's own recommendations as multipliers.</p>
+      </div>
+      <div class="card hov">
+        <h4>Channel weights</h4>
+        <div id="weights" style="margin-top:12px"></div>
+      </div>
+    </div>
+
+    <div class="caution rv"><b style="color:var(--amber)">This is an illustration, not a forecast.</b> The index is a teaching device built from one descriptive, convenience-sampled study of 100 people on a single project. It has no predictive validity, was not derived from campaign outcome data, and should not be used to justify real budget allocation.</div>
+  </div>
+</section>
+
+<!-- ================= 06 FINDINGS ================= -->
+<section id="findings">
+  <div class="wrap">
+    <div class="secno">07 — Recommendations</div>
+    <div class="sechead rv">
+      <span class="tag">Chapter 5 · Conclusion</span>
+      <h2>Ten recommendations</h2>
+      <p class="lede">Ordered by how directly the study's own data supports them.</p>
+    </div>
+
+    <div class="recs rv" id="recs"></div>
+
+    <div class="grid g2 rv" style="margin-top:24px">
+      <div class="card hov"><h4>Managerial implications</h4><p class="tiny">Prioritise digital communication, allocate resources to high-performing channels such as WhatsApp and social media, invest in workforce training, use analytics to evaluate campaigns, integrate online and offline awareness, and build long-term trust through transparent communication. Within the limits of this sample, such actions are consistent with improved project efficiency, lower consumer resistance and higher adoption.</p></div>
+      <div class="card hov"><h4>Scope for future research</h4><ul class="tiny" style="margin:0;padding-left:19px;line-height:1.8"><li>Research across multiple states in India</li><li>Comparison of different implementation agencies</li><li>Long-term impact using probability sampling</li><li>Evaluation of AI-based customer-engagement tools</li><li>The role of social-media influencers in utility awareness</li><li>Satisfaction after long-term smart-meter usage</li></ul></div>
+    </div>
+
+    <div class="limits rv" style="margin-top:16px">
+      <h4 style="color:var(--amber)">Limitations of the study</h4>
+      <p class="tiny" style="margin-top:8px">Stated plainly, because the value of the findings depends on them.</p>
+      <ul>
+        <li>The sample was limited to 100 respondents drawn by convenience sampling.</li>
+        <li>The study focused on selected project locations.</li>
+        <li>Consumer opinions may change over time.</li>
+        <li>Time constraints limited the scope of data collection.</li>
+        <li>Findings depend on the honesty of respondents.</li>
+        <li>Results are indicative of the surveyed group and are not generalisable to all regions of India.</li>
+      </ul>
+    </div>
+
+    <div class="concl rv" style="margin-top:16px">
+      <h4 style="margin-bottom:14px">Conclusion</h4>
+      <p class="muted" style="font-size:16.5px">Among the respondents surveyed, those who received timely, accurate information through digital platforms were more likely to understand the benefits of smart meters, trust the technology and support its adoption. WhatsApp, social media and online awareness campaigns were the most effective channels for reaching consumers.</p>
+      <p class="muted" style="font-size:16.5px">The findings also show that digital marketing worked best when combined with field-level awareness, trained technicians, community engagement and responsive support. Within the limits of a descriptive, convenience-based study, well-planned digital-marketing strategies are positively associated with consumer awareness, perception and willingness to adopt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 SURVEY ================= -->
+<section id="survey">
+  <div class="wrap">
+    <div class="secno">08 — Interactive</div>
+    <div class="sechead rv">
+      <span class="tag">Annexure I · The original instrument</span>
+      <h2>Answer the same questions they did</h2>
+      <p class="lede">Eight real items from the questionnaire. Answer, and each screen reveals how the 100 respondents answered.</p>
+    </div>
+
+    <div class="survey rv">
+      <div class="svtop">
+        <span class="mono" style="color:var(--cyan)" id="svCount">Question 1 of 8</span>
+        <span class="mono" style="margin-left:auto">Number keys work · nothing is stored or sent</span>
+      </div>
+      <div class="svprog"><i id="svBar"></i></div>
+      <div class="svbody">
+        <div id="svQuiz">
+          <div class="svq" id="svQ"></div>
+          <div class="svopts" id="svOpts"></div>
+          <div class="svsay" id="svSay"></div>
+        </div>
+        <div class="svres" id="svRes">
+          <div class="svq" style="margin-bottom:8px">Your alignment with the sample</div>
+          <p class="tiny">How often your answer matched the majority answer of the 100 respondents.</p>
+          <div class="alignbar"><i id="alFill"></i><span id="alTxt">—</span></div>
+          <div id="svSummary" style="margin-top:20px"></div>
+        </div>
+      </div>
+      <div class="svfoot">
+        <button class="btn ghost" id="svBack" disabled>Back</button>
+        <button class="btn ghost" id="svSkip">Skip</button>
+        <button class="btn" id="svNext" disabled>Next question</button>
+        <button class="btn ghost" id="svRestart" style="margin-left:auto">Start over</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 08 APPENDIX ================= -->
+<section id="appendix">
+  <div class="wrap">
+    <div class="secno">09 — Appendix</div>
+    <div class="sechead rv"><span class="tag">Back matter</span><h2>References &amp; annexures</h2></div>
+    <div class="rv">
+      <details class="acc" open><summary>References</summary><div class="ab">
+        <p class="tiny" style="margin-bottom:16px">APA 7th edition. Entries marked * should be completed with the exact URL, DOI or report identifier before final submission.</p>
+        <div class="reflist">
+          <div>Central Electricity Authority. (2023). <b>Annual report on the Indian power sector.</b> Government of India.</div>
+          <div>Chaffey, D., &amp; Ellis-Chadwick, F. (2022). <b>Digital marketing: Strategy, implementation and practice</b> (8th ed.). Pearson Education.</div>
+          <div>Davis, F. D. (1989). <b>Perceived usefulness, perceived ease of use, and user acceptance of information technology.</b> MIS Quarterly, 13(3), 319–340.</div>
+          <div>Deloitte.* (2023). <b>Digital transformation in the utilities sector.</b> Deloitte Insights.</div>
+          <div>International Energy Agency. (2023). <b>Digitalisation and energy.</b> IEA.</div>
+          <div>Kotler, P., Kartajaya, H., &amp; Setiawan, I. (2021). <b>Marketing 5.0: Technology for humanity.</b> Wiley.</div>
+          <div>Kotler, P., &amp; Keller, K. L. (2016). <b>Marketing management</b> (15th ed.). Pearson Education.</div>
+          <div>McKinsey &amp; Company.* (2023). <b>The future of digital customer engagement.</b></div>
+          <div>Ministry of Power, Government of India. (2023). <b>Revamped Distribution Sector Scheme (RDSS).</b></div>
+          <div>Ministry of Power, Government of India. (2023). <b>Smart Meter National Programme (SMNP).</b></div>
+          <div>Rogers, E. M. (2003). <b>Diffusion of innovations</b> (5th ed.). Free Press.</div>
+          <div>Smart Energy International.* (2023). <b>Global smart metering market report.</b></div>
+          <div>Statista.* (2024). <b>Digital marketing and internet usage in India.</b></div>
+          <div>World Bank. (2023). <b>Digital development overview.</b></div>
+        </div>
+      </div></details>
+
+      <details class="acc"><summary>Annexure I — Questionnaire</summary><div class="ab" id="qPaper"></div></details>
+
+      <details class="acc"><summary>Annexure II — Company profile</summary><div class="ab">
+        <table class="prof">
+          <tr><th>Company name</th><td>Awign Enterprises Pvt. Ltd.</td></tr>
+          <tr><th>Headquarters</th><td>Bengaluru, Karnataka, India</td></tr>
+          <tr><th>Industry</th><td>Workforce solutions and managed services</td></tr>
+          <tr><th>Founded</th><td>2016</td></tr>
+          <tr><th>Business nature</th><td>Technology-enabled workforce management and project-execution company</td></tr>
+          <tr><th>Core services</th><td>Workforce management, managed services, recruitment, payroll, field operations, project execution, smart-meter deployment support, consumer-awareness campaigns</td></tr>
+          <tr><th>Industries served</th><td>Telecommunications, e-commerce, banking and financial services, retail, logistics, manufacturing, government infrastructure, smart metering</td></tr>
+          <tr><th>Role in smart-meter projects</th><td>Recruiting and deploying technicians, conducting consumer surveys, facilitating installations, running awareness campaigns, monitoring progress, managing field operations, and providing client reporting and quality assurance</td></tr>
+          <tr><th>Vision</th><td>To transform workforce management through technology-driven, scalable and efficient operational solutions</td></tr>
+          <tr><th>Mission</th><td>To deliver reliable workforce and operational excellence while enabling organisations to execute large-scale projects efficiently</td></tr>
+        </table>
+      </div></details>
+
+      <details class="acc"><summary>Annexure III — Abbreviations</summary><div class="ab">
+        <p class="tiny" style="margin-bottom:14px">These terms are highlighted throughout the page — hover any of them to read the expansion in place.</p>
+        <dl class="gloss" id="glossGrid"></dl>
+      </div></details>
+
+      <details class="acc"><summary>Certificate, declaration &amp; acknowledgement</summary><div class="ab">
+        <div class="grid g3">
+          <div class="card"><h4>Certificate</h4><p class="tiny">This is to certify that the Research Project entitled "A Study on the Effectiveness of Digital Marketing Strategies in Promoting Smart Meter Adoption: A Case Study of Awign Enterprises Pvt. Ltd.", submitted by Mr. Shreyas R (USN: 232VBBNR0342), is a bonafide record of the work carried out under my guidance during the academic year 2025–26. The project fulfils the requirements prescribed by Jain (Deemed-to-be University) for the award of the degree of Bachelor of Business Administration (Marketing).</p></div>
+          <div class="card"><h4>Declaration</h4><p class="tiny">I, Shreyas R, hereby declare that this Research Project has been carried out by me under the guidance of my faculty guide, in partial fulfilment of the requirements for the award of the degree of BBA (Marketing) at Jain (Deemed-to-be University). It is my original work and has not been submitted, wholly or in part, for any other degree, diploma or qualification. Information drawn from books, journals, websites, company records and other published sources has been duly acknowledged and referenced.</p></div>
+          <div class="card"><h4>Acknowledgement</h4><p class="tiny">Sincere gratitude to Jain (Deemed-to-be University) for the opportunity, and to my faculty guide for continuous guidance and constructive suggestions. Thanks to the management and colleagues of Awign Enterprises Pvt. Ltd. for sharing insights into the Smart Meter Project, to every respondent who gave their time and opinions, and to my parents and friends for their support throughout.</p></div>
+        </div>
+      </div></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><h4>The study</h4><p>A Study on the Effectiveness of Digital Marketing Strategies in Promoting Smart Meter Adoption: A Case Study of Awign Enterprises Pvt. Ltd.</p></div>
+      <div><h4>Submitted by</h4><p>Shreyas R<br>USN 232VBBNR0342<br>BBA (Marketing), 2025–26<br>Jain (Deemed-to-be University), Bengaluru</p></div>
+      <div><h4>Jump to</h4><ul><li><a href="#overview">Overview</a></li><li><a href="#operations">Project lifecycle</a></li><li><a href="#data">The twelve tables</a></li><li><a href="#mix">Channel mix planner</a></li><li><a href="#survey">Take the survey</a></li><li><a href="#appendix">References</a></li></ul></div>
+      <div><h4>Keyboard</h4><ul><li><kbd>K</kbd> search</li><li><kbd>T</kbd> theme</li><li><kbd>1</kbd>–<kbd>5</kbd> answer survey</li><li><kbd>Esc</kbd> close</li></ul></div>
+    </div>
+    <div class="signoff">
+      <span class="mono" style="color:var(--text-3)">Research report microsite</span>
+      <span class="mono" style="color:var(--text-3)">All figures n = 100 · convenience sample · indicative only</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="cbox">
+    <input id="cIn" type="text" placeholder="Search sections, tables, terms…" autocomplete="off" spellcheck="false">
+    <div class="clist" id="cList"></div>
+    <div class="cfoot2"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+const $=(s,r)=>(r||document).querySelector(s), $$=(s,r)=>[...(r||document).querySelectorAll(s)];
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+/* ---------- palette ---------- */
+const P={wa:"#34D399",fb:"#60A5FA",yt:"#FB7185",sms:"#8FA3BF",web:"#FBBF24",
+  soc:"#8B7CF6",dept:"#22D3EE",fam:"#34D399",news:"#C084FC",
+  cy:"#22D3EE",vi:"#8B7CF6",am:"#FBBF24",gr:"#34D399",rd:"#FB7185",bl:"#60A5FA",gy:"#64748B"};
+
+/* ---------- Table 4.6 : featured ---------- */
+const CH=[
+  {k:"wa", name:"WhatsApp", obs:31, col:P.wa},
+  {k:"fb", name:"Facebook", obs:22, col:P.fb},
+  {k:"yt", name:"YouTube",  obs:19, col:P.yt},
+  {k:"sms",name:"SMS",      obs:16, col:P.sms},
+  {k:"web",name:"Website",  obs:12, col:P.web}
+];
+const MAXOBS=Math.max(...CH.map(c=>c.obs));
+CH.forEach(c=>c.w=c.obs/MAXOBS);
+
+$("#bigbars").innerHTML=CH.map((c,i)=>`
+  <div class="bb${i===0?" lead":""}">
+    <div class="name"><i style="background:${c.col}"></i>${c.name}</div>
+    <div class="lane"><b style="background:linear-gradient(90deg,${c.col},${c.col}bb)" data-w="${c.obs/MAXOBS}"></b><span class="pct">${c.obs}%</span></div>
+  </div>`).join("");
+
+/* ---------- the other eleven figures ---------- */
+const FIGS=[
+ {id:"f1",tbl:"Table 4.1",ref:"Fig 4.1",g:"profile",type:"split",title:"Gender distribution",unit:"Gender",
+  rows:[["Male",62,P.bl],["Female",38,P.vi]],
+  note:"Of the 100 respondents, <b>62% were male and 38% female</b>, reflecting the composition of consumers who took part in the study."},
+ {id:"f2",tbl:"Table 4.2",ref:"Fig 4.2",g:"profile",type:"bars",title:"Age group",unit:"Age group",
+  rows:[["26–35 years",37,P.cy],["36–45 years",26,P.vi],["Above 45 years",19,P.bl],["18–25 years",18,P.gy]],
+  note:"The <b>26–35 band was the largest segment at 37%</b> — the group most habituated to messaging apps."},
+ {id:"f3",tbl:"Table 4.3",ref:"Fig 4.3",g:"profile",type:"bars",title:"Educational qualification",unit:"Qualification",
+  rows:[["Graduate",47,P.cy],["Post Graduate",25,P.vi],["PUC",18,P.bl],["SSLC",10,P.gy]],
+  note:"<b>72% held a graduate or post-graduate qualification</b>, relevant context for the high awareness figures that follow."},
+ {id:"f4",tbl:"Table 4.4",ref:"Fig 4.4",g:"reach",type:"split",title:"Awareness of smart meters",unit:"Response",
+  rows:[["Yes",82,P.gr],["No",18,P.gy]],
+  note:"A substantial <b>82% were aware of smart meters</b>. The remaining 18% mark the continuing need for education."},
+ {id:"f5",tbl:"Table 4.5",ref:"Fig 4.5",g:"reach",type:"bars",title:"First source of information",unit:"Source",
+  rows:[["Social Media",35,P.soc],["WhatsApp",25,P.wa],["Electricity Department",18,P.dept],["Friends &amp; Family",12,P.gr],["Newspaper",10,P.news]],
+  note:"Social media and WhatsApp together accounted for <b>60% of first-contact information</b> — more than three times the electricity department at 18%."},
+ {id:"f7",tbl:"Table 4.7",ref:"Fig 4.7",g:"attitude",type:"cols",title:"Satisfaction with digital communication",unit:"Satisfaction level",mean:3.91,scale:5,short:["Highly sat.","Satisfied","Neutral","Dissat.","V. dissat."],
+  rows:[["Highly Satisfied",28,P.gr],["Satisfied",46,P.cy],["Neutral",17,P.gy],["Dissatisfied",7,P.am],["Highly Dissatisfied",2,P.rd]],
+  note:"<b>74% were satisfied or highly satisfied.</b> The weighted mean of 3.91 sits firmly on the positive side of neutral."},
+ {id:"f8",tbl:"Table 4.8",ref:"Fig 4.8",g:"attitude",type:"cols",title:"Consumer perception of smart meters",unit:"Opinion",mean:3.80,scale:5,short:["Very pos.","Positive","Neutral","Negative","Very neg."],
+  rows:[["Very Positive",24,P.gr],["Positive",48,P.cy],["Neutral",16,P.gy],["Negative",8,P.am],["Very Negative",4,P.rd]],
+  note:"A combined <b>72% held a positive or very positive perception</b>. The weighted mean of 3.80 confirms a broadly favourable view."},
+ {id:"f9",tbl:"Table 4.9",ref:"Fig 4.9",g:"attitude",type:"bars",title:"Most valued benefit",unit:"Benefit",
+  rows:[["Accurate Billing",40,P.cy],["Energy Monitoring",24,P.vi],["Reduced Power Theft",18,P.bl],["Convenience",18,P.gy]],
+  note:"<b>Accurate billing (40%) outranked every other benefit.</b> Campaigns should keep leading with billing transparency."},
+ {id:"f10",tbl:"Table 4.10",ref:"Fig 4.10",g:"attitude",type:"split",title:"Trust in smart-meter technology",unit:"Response",
+  rows:[["Yes",76,P.gr],["No",24,P.rd]],
+  note:"Around three-quarters <b>(76%) trusted the technology</b>. The 24% who did not are the population every future campaign is for."},
+ {id:"f11",tbl:"Table 4.11",ref:"Fig 4.11",g:"attitude",type:"split",title:"Willingness to recommend",unit:"Response",
+  rows:[["Yes",79,P.gr],["No",21,P.gy]],
+  note:"<b>79% would recommend smart meters to others</b>, consistent with the favourable perception recorded above."},
+ {id:"f12",tbl:"Table 4.12",ref:"Fig 4.12",g:"attitude",type:"cols",title:"Overall effectiveness rating",unit:"Rating",mean:2.81,scale:4,short:["Excellent","Good","Average","Poor"],
+  rows:[["Excellent",21,P.gr],["Good",49,P.cy],["Average",20,P.gy],["Poor",10,P.rd]],
+  note:"<b>70% rated the initiatives good or excellent.</b> The weighted mean of 2.81 out of 4 sits between average and good."}
+];
+
+/* ================= RENDERERS ================= */
+function splitChart(f){
+  const a=f.rows[0],b=f.rows[1];
+  return `<div class="split">
+    <div class="heads">
+      <div><div class="big">${a[1]}<span>%</span></div><span class="lb">${esc(a[0])}</span></div>
+      <div class="small"><div class="n">${b[1]}%</div><span class="lb">${esc(b[0])}</span></div>
+    </div>
+    <div class="lane">
+      <i style="background:linear-gradient(90deg,${a[2]},${a[2]}cc);width:${a[1]}%" data-sc="1"></i>
+      <i style="background:${b[2]}55;width:${b[1]}%" data-sc="1"></i>
+    </div></div>`;
+}
+
+function barsChart(f){
+  const W=320,RH=42,H=f.rows.length*RH;
+  const max=Math.max(...f.rows.map(r=>r[1])),BW=W-44;
+  let o="";
+  f.rows.forEach((r,i)=>{
+    const y=i*RH,w=Math.max(3,(r[1]/max)*BW);
+    o+=`<text class="axlab" x="0" y="${y+11}">${r[0]}</text>
+      <rect x="0" y="${y+17}" width="${W}" height="15" rx="4" fill="var(--track)"></rect>
+      <rect class="barh" x="0" y="${y+17}" width="${w}" height="15" rx="4" fill="${r[2]}"
+        style="transform:scaleX(0);transform-origin:left;transition:transform .85s cubic-bezier(.16,.84,.3,1) ${i*.09}s">
+        <title>${r[0]}: ${r[1]}%</title></rect>
+      <text class="vallab" x="${W}" y="${y+29}" text-anchor="end"
+        style="opacity:0;transition:opacity .45s ${.35+i*.09}s">${r[1]}%</text>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(f.title)} bar chart">${o}</svg>`;
+}
+
+function colsChart(f){
+  const W=320,H=186,BASE=132,TOP=24;
+  const n=f.rows.length,gap=10,bw=(W-gap*(n-1))/n;
+  const max=Math.max(...f.rows.map(r=>r[1]));
+  let o="";
+  [0,.5,1].forEach(t=>{const y=BASE-t*(BASE-TOP);
+    o+=`<line class="gridln" x1="0" y1="${y}" x2="${W}" y2="${y}"></line>`;});
+  f.rows.forEach((r,i)=>{
+    const x=i*(bw+gap), h=Math.max(3,(r[1]/max)*(BASE-TOP)), y=BASE-h;
+    o+=`<rect class="barv" x="${x}" y="${y}" width="${bw}" height="${h}" rx="5" fill="${r[2]}"
+        style="transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);transition:transform .85s cubic-bezier(.16,.84,.3,1) ${i*.09}s">
+        <title>${r[0]}: ${r[1]}%</title></rect>
+      <text class="vallab" x="${x+bw/2}" y="${y-8}" text-anchor="middle"
+        style="opacity:0;transition:opacity .45s ${.35+i*.09}s">${r[1]}%</text>`;
+    const lab=(f.short&&f.short[i])||r[0];
+    o+=`<text class="axlab sm" x="${x+bw/2}" y="${BASE+17}" text-anchor="middle">${lab}</text>`;
+  });
+  const mx=((f.mean-1)/(f.scale-1))*W;
+  o+=`<g style="opacity:0;transition:opacity .5s .75s">
+      <line class="meanln" x1="${mx}" y1="${TOP-14}" x2="${mx}" y2="${BASE}"></line>
+      <text class="meantx" x="${Math.min(Math.max(mx,30),W-30)}" y="${TOP-19}" text-anchor="middle">MEAN ${f.mean.toFixed(2)}</text></g>`;
+  o+=`<line x1="0" y1="${BASE}" x2="${W}" y2="${BASE}" stroke="var(--line-2)" stroke-width="1"></line>`;
+  return `<svg viewBox="0 -10 ${W} ${H}" role="img" aria-label="${esc(f.title)} column chart">${o}</svg>`;
+}
+
+function tableHTML(f){
+  const t=f.rows.reduce((a,r)=>a+r[1],0);
+  return `<table class="dt"><thead><tr><th>${esc(f.unit)}</th><th>n</th><th>%</th></tr></thead><tbody>`+
+    f.rows.map(r=>`<tr><td><i class="sw" style="background:${r[2]}"></i>${r[0]}</td><td>${r[1]}</td><td>${r[1]}%</td></tr>`).join("")+
+    `<tr><td>Total</td><td>${t}</td><td>${t}%</td></tr></tbody></table>`;
+}
+
+/* ---------- build chart cards ---------- */
+$("#charts").innerHTML=FIGS.map(f=>`
+  <article class="chart rv" id="${f.id}" data-g="${f.g}">
+    <div class="chead">
+      <span class="ref">${f.ref}</span><h4>${esc(f.title)}</h4>
+      <div class="ctools">
+        <button data-v="chart" data-f="${f.id}" aria-pressed="true">Chart</button>
+        <button data-v="table" data-f="${f.id}" aria-pressed="false">Table</button>
+        <button data-csv="${f.id}" title="Export CSV">CSV</button>
+      </div>
+    </div>
+    <div class="cbody" data-b="${f.id}"></div>
+    <div class="cfoot"><span class="src">${f.tbl} · n = 100</span>${f.note}</div>
+  </article>`).join("");
+
+const view={};FIGS.forEach(f=>view[f.id]="chart");
+
+function draw(f){
+  const el=$(`[data-b="${f.id}"]`);
+  if(view[f.id]==="table"){el.innerHTML=tableHTML(f);el.style.alignItems="flex-start";return;}
+  el.style.alignItems="center";
+  el.innerHTML = f.type==="split"?splitChart(f) : f.type==="cols"?colsChart(f) : barsChart(f);
+  animate(el);
+}
+function animate(el){
+  const go=()=>{
+    $$("rect.barh",el).forEach(n=>n.style.transform="scaleX(1)");
+    $$("rect.barv",el).forEach(n=>n.style.transform="scaleY(1)");
+    $$("text.vallab,g",el).forEach(n=>{if(n.style&&n.style.transition)n.style.opacity="1"});
+    $$(".split .lane i",el).forEach(n=>n.style.transform="scaleX(1)");
+  };
+  RM?go():requestAnimationFrame(()=>requestAnimationFrame(go));
+}
+
+$("#charts").addEventListener("click",e=>{
+  const v=e.target.closest("[data-v]");
+  if(v){const f=FIGS.find(x=>x.id===v.dataset.f);
+    $$(`[data-f="${f.id}"]`).forEach(b=>b.setAttribute("aria-pressed",String(b===v)));
+    view[f.id]=v.dataset.v;draw(f);return;}
+  const c=e.target.closest("[data-csv]");
+  if(c){const f=FIGS.find(x=>x.id===c.dataset.csv);
+    const t=f.rows.reduce((a,r)=>a+r[1],0);
+    const csv=[`"${f.tbl} - ${f.title}"`,`"${f.unit}","n","percent"`]
+      .concat(f.rows.map(r=>`"${r[0].replace(/&amp;/g,"&")}",${r[1]},${r[1]}`))
+      .concat([`"Total",${t},${t}`]).join("\n");
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));
+    a.download=f.tbl.replace(/[ .]/g,"_")+".csv";a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+    c.textContent="Saved";setTimeout(()=>c.textContent="CSV",1300);}
+});
+
+$$(".fchip").forEach(b=>b.addEventListener("click",()=>{
+  $$(".fchip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  const g=b.dataset.g;
+  $$(".chart").forEach(c=>{c.style.display=(g==="all"||c.dataset.g===g)?"":"none"});
+}));
+
+/* ================= REVEAL & COUNTERS ================= */
+const io=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add("in");io.unobserve(e.target);
+  if(e.target.classList.contains("chart")){
+    const f=FIGS.find(x=>x.id===e.target.id);if(f)setTimeout(()=>draw(f),80);}
+  $$("[data-c]",e.target).forEach(count);
+  $$(".kpi .track i",e.target).forEach(i=>setTimeout(()=>i.style.width=i.dataset.w+"%",140));
+});},{threshold:.1,rootMargin:"0px 0px -50px 0px"});
+$$(".rv").forEach(el=>io.observe(el));
+
+function count(el){
+  const t=parseFloat(el.dataset.c),d=+(el.dataset.d||0);
+  if(RM){el.textContent=t.toFixed(d);return;}
+  const t0=performance.now(),dur=1300;
+  const tick=n=>{const p=Math.min(1,(n-t0)/dur),e=1-Math.pow(1-p,3);
+    el.textContent=(t*e).toFixed(d);if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);
+}
+
+/* featured bars */
+const fio=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(!e.isIntersecting)return;fio.unobserve(e.target);
+  $$(".bb .lane b",e.target).forEach((b,i)=>{
+    b.style.transitionDelay=(i*.1)+"s";
+    requestAnimationFrame(()=>requestAnimationFrame(()=>b.style.transform="scaleX("+b.dataset.w+")"));});
+});},{threshold:.2});
+fio.observe($(".feature"));
+
+/* ========== RADIAL WORKFLOW HUB ========== */
+const HUBIC={
+ file:'<path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/>',
+ pin:'<path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>',
+ users:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2c2.5.4 4.5 2.6 4.5 5.8"/>',
+ message:'<path d="M4 5h16v11H8l-4 4V5z"/>',
+ shield:'<path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+ box:'<path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v9l9 5 9-5V8"/><path d="M12 13v9"/>',
+ truck:'<rect x="2" y="7" width="12" height="9"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/>',
+ chart:'<path d="M4 20V10"/><path d="M11 20V4"/><path d="M18 20v-7"/>',
+ present:'<rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20l4-4 4 4"/>'
+};
+const HUB=[
+ {ic:"file",lab:"Client requirement",tx:"The brief lands — <b>scope, sites and timeline</b> are locked in with the client, along with productivity targets and SLAs."},
+ {ic:"pin",lab:"Feasibility study",tx:"Ground teams verify each location for <b>manpower, accommodation, transport</b> and local constraints before a single hire is made."},
+ {ic:"users",lab:"Manpower planning",tx:"Headcount is mapped against install volume, <b>warehouse by warehouse</b>, against the demand the client has committed to."},
+ {ic:"message",lab:"Local hiring",tx:"Technicians are sourced from the region they will work in — through <b>WhatsApp campaigns</b>, job portals, job fairs, referrals and social media."},
+ {ic:"shield",lab:"KYC and compliance",tx:"Every hire is <b>KYC-verified and document-checked</b>, with induction and safety training closed out before they touch client property."},
+ {ic:"box",lab:"Safety kit distribution",tx:"PPE, FRC jackets, helmets and face shields ship out. <b>Nobody deploys without a kit.</b>"},
+ {ic:"truck",lab:"Field deployment",tx:"Technicians move into the field, meter by meter, coordinated with <b>client site teams and internal supervisors</b>."},
+ {ic:"chart",lab:"Performance tracking",tx:"Installs, attendance and quality update live on the <b>Awign Smart Metering Project Tracker</b>, so gaps surface the same day."},
+ {ic:"present",lab:"Client reporting",tx:"Numbers roll up into <b>daily and weekly MIS reports</b> the client can act on, closing the loop back to the brief."}
+];
+
+const hStage=$("#hubStage"),hNodes=$("#hubNodes"),hSpokes=$("#hubSpokes");
+let hNodeEls=[],hLineEls=[],hDotEls=[],hIx=0,hTimer=null,hPaused=false;
+
+function hubLayout(){
+  const W=hStage.clientWidth,H=hStage.clientHeight;
+  const cx=W/2,cy=H/2,pad=W<620?34:(W<760?56:78),r=Math.min(cx,cy)-pad;
+  hNodes.innerHTML="";hSpokes.innerHTML="";
+  hNodeEls=[];hLineEls=[];hDotEls=[];
+  HUB.forEach((s,i)=>{
+    const ang=(Math.PI*2*i)/HUB.length-Math.PI/2;
+    const x=cx+r*Math.cos(ang),y=cy+r*Math.sin(ang);
+    const d=`M ${cx} ${cy} L ${x} ${y}`;
+
+    const line=document.createElementNS("http://www.w3.org/2000/svg","path");
+    line.setAttribute("d",d);line.setAttribute("class","spoke");
+    hSpokes.appendChild(line);hLineEls.push(line);
+
+    const dot=document.createElementNS("http://www.w3.org/2000/svg","circle");
+    dot.setAttribute("r","3.6");dot.setAttribute("class","pdot");
+    dot.style.offsetPath=`path('${d}')`;
+    hSpokes.appendChild(dot);hDotEls.push(dot);
+
+    const n=document.createElement("button");
+    n.className="hnode";n.type="button";n.dataset.i=i;
+    n.setAttribute("aria-label",`Stage ${i+1}: ${s.lab}`);
+    n.style.left=x+"px";n.style.top=y+"px";
+    n.innerHTML=`<span class="hbadge"><svg viewBox="0 0 24 24">${HUBIC[s.ic]}</svg>`+
+      `<span class="dot">${i+1}</span></span><span class="hlab">${esc(s.lab)}</span>`;
+    hNodes.appendChild(n);hNodeEls.push(n);
+  });
+}
+
+function hubGo(i){
+  hIx=i;
+  hLineEls.forEach(l=>l.classList.remove("on"));
+  hNodeEls.forEach(n=>n.classList.remove("on"));
+  hDotEls.forEach(d=>d.classList.remove("run"));
+  hLineEls[i].classList.add("on");
+  hNodeEls[i].classList.add("on");
+  if(!RM){const d=hDotEls[i];void d.getBoundingClientRect();d.classList.add("run");}
+  $("#hubNum").textContent=i+1;
+  $("#hubTag").textContent="Stage "+String(i+1).padStart(2,"0")+" · "+HUB[i].lab;
+  $("#hubTxt").innerHTML=HUB[i].tx;
+}
+function hRestart(){if(hTimer)clearInterval(hTimer);if(RM||hPaused)return;
+  hTimer=setInterval(()=>hubGo((hIx+1)%HUB.length),2800);}
+function hStop(){if(hTimer){clearInterval(hTimer);hTimer=null}}
+
+hNodes.addEventListener("click",e=>{const n=e.target.closest(".hnode");
+  if(n){hubGo(+n.dataset.i);hRestart()}});
+hStage.addEventListener("mouseenter",()=>{hPaused=true;hStop()});
+hStage.addEventListener("mouseleave",()=>{hPaused=false;hRestart()});
+hStage.addEventListener("focusin",()=>{hPaused=true;hStop()});
+hStage.addEventListener("focusout",()=>{hPaused=false;hRestart()});
+
+hubLayout();hubGo(0);
+let hrz;addEventListener("resize",()=>{clearTimeout(hrz);
+  hrz=setTimeout(()=>{hubLayout();hubGo(hIx)},180)});
+new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?hRestart():hStop())},
+  {threshold:.15}).observe($("#pipe"));
+
+/* ---------- stage stepper ---------- */
+const STAGES=[
+ {t:"Understanding Client Requirements",p:["Collect project scope, timelines and technical requirements.",
+   "Understand installation processes, productivity targets and SLAs agreed with the client."]},
+ {t:"Location & Feasibility Assessment",p:["Review project locations and deployment plans.",
+   "Conduct feasibility checks for manpower availability, accommodation, transportation and local challenges.",
+   "Ensure every client compliance requirement is understood before commitments are made."]},
+ {t:"Workforce Planning & Hiring",p:["Estimate manpower requirements based on project demand.",
+   "Hire local technicians through a multi-channel recruitment mix."],
+  sub:["WhatsApp campaigns","Job portals","Job fairs","Local referrals","Social media"],hot:0},
+ {t:"Candidate Verification & Onboarding",p:["Complete KYC verification and collect all required documents.",
+   "Conduct induction and safety training for every technician.",
+   "Issue safety kits before anyone reaches a site.",
+   "Ensure statutory and client compliance is closed out prior to deployment."],
+  sub:["PPE","FRC jackets","Helmets","Face shields"]},
+ {t:"Deployment",p:["Deploy technicians to assigned locations.",
+   "Coordinate with client site teams and internal supervisors.",
+   "Ensure smooth onboarding at project sites so day one is productive."]},
+ {t:"Performance Monitoring",p:["Track daily productivity through the Awign Smart Metering Project Tracker.",
+   "Monitor attendance, installations, quality and target achievement.",
+   "Identify gaps early and take corrective action before they compound."]},
+ {t:"Client & Operations Management",p:["Share daily and weekly MIS reports with the client.",
+   "Resolve operational issues and escalations as they arise.",
+   "Coordinate across clients, field supervisors and internal stakeholders to keep delivery on track."]}
+];
+let stIx=0;
+$("#stageList").innerHTML=STAGES.map((s,i)=>
+ `<button role="tab" data-i="${i}" aria-selected="${i===0}">
+    <span class="sn">${String(i+1).padStart(2,"0")}</span><span>${esc(s.t)}</span></button>`).join("");
+
+function renderStage(){
+  const s=STAGES[stIx];
+  $("#stagePanel").innerHTML=
+   `<div class="pn">Stage ${String(stIx+1).padStart(2,"0")} of ${String(STAGES.length).padStart(2,"0")}</div>
+    <h3>${esc(s.t)}</h3>
+    <ul>${s.p.map((x,i)=>`<li style="animation-delay:${(i*.07+.05).toFixed(2)}s">${esc(x)}</li>`).join("")}</ul>
+    ${s.sub?`<div class="sub">${s.sub.map((x,i)=>
+      `<span class="${s.hot===0&&i===0?"hot":""}">${esc(x)}</span>`).join("")}</div>`:""}
+    <div class="stageprog">${STAGES.map((_,i)=>`<i class="${i<=stIx?"on":""}"></i>`).join("")}</div>`;
+  $$("#stageList button").forEach(b=>b.setAttribute("aria-selected",String(+b.dataset.i===stIx)));
+}
+$("#stageList").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-i]");if(!b)return;
+  stIx=+b.dataset.i;renderStage();});
+$("#stageList").addEventListener("keydown",e=>{
+  if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;
+  e.preventDefault();
+  stIx=(stIx+(e.key==="ArrowDown"?1:STAGES.length-1))%STAGES.length;
+  renderStage();$$("#stageList button")[stIx].focus();});
+renderStage();
+
+/* ================= NAV / THEME / PROGRESS ================= */
+const SECS=["overview","context","operations","framework","method","data","mix","findings","survey","appendix"];
+const links=$$(".navlinks a");
+new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)
+  links.forEach(a=>a.setAttribute("aria-current",String(a.dataset.s===e.target.id)));});
+},{rootMargin:"-45% 0px -50% 0px"}).observe.length;
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)
+  links.forEach(a=>a.setAttribute("aria-current",String(a.dataset.s===e.target.id)));});
+},{rootMargin:"-45% 0px -50% 0px"});
+SECS.forEach(id=>{const el=document.getElementById(id);if(el)spy.observe(el)});
+
+let tick=false;
+addEventListener("scroll",()=>{if(tick)return;tick=true;
+  requestAnimationFrame(()=>{
+    const h=document.documentElement.scrollHeight-innerHeight;
+    $("#prog").style.width=(h>0?Math.min(100,scrollY/h*100):0)+"%";tick=false;});
+},{passive:true});
+
+function theme(){const d=document.documentElement;
+  d.setAttribute("data-theme",d.getAttribute("data-theme")==="dark"?"light":"dark");}
+$("#themeBtn").addEventListener("click",theme);
+$("#menuBtn").addEventListener("click",()=>$("#navlinks").classList.toggle("open"));
+$$(".navlinks a").forEach(a=>a.addEventListener("click",()=>$("#navlinks").classList.remove("open")));
+
+/* ================= PESTEL ================= */
+$("#pestel").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  const open=b.getAttribute("aria-expanded")==="true";
+  $$("#pestel button").forEach(x=>x.setAttribute("aria-expanded","false"));
+  b.setAttribute("aria-expanded",open?"false":"true");});
+
+/* ================= GLOSSARY ================= */
+const GLOSS={
+ "AI":"Artificial Intelligence",
+ "AT&C":"Aggregate Technical & Commercial — the combined technical and billing losses a distribution company carries",
+ "DISCOM":"Distribution Company — the state utility that delivers electricity to the consumer",
+ "IoT":"Internet of Things — the networked devices that let a meter report its own reading",
+ "KPI":"Key Performance Indicator",
+ "RDSS":"Revamped Distribution Sector Scheme — the central scheme funding distribution upgrades, including smart meters",
+ "SEO":"Search Engine Optimisation",
+ "SEM":"Search Engine Marketing",
+ "SMNP":"Smart Meter National Programme — India's national programme for smart-meter deployment",
+ "SWOT":"Strengths, Weaknesses, Opportunities & Threats",
+ "TAM":"Technology Acceptance Model — Davis (1989); adoption follows perceived usefulness and ease of use"
+};
+$("#glossGrid").innerHTML=Object.entries(GLOSS).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+const tip=$("#tip");
+function showTip(el){const k=el.dataset.t;if(!GLOSS[k])return;
+  tip.textContent=GLOSS[k];tip.classList.add("on");
+  const r=el.getBoundingClientRect(),w=Math.min(280,innerWidth-24);
+  tip.style.left=Math.max(12,Math.min(innerWidth-w-12,r.left))+"px";
+  tip.style.top=(r.bottom+10)+"px";}
+const hideTip=()=>tip.classList.remove("on");
+document.addEventListener("mouseover",e=>{const t=e.target.closest(".term");t?showTip(t):hideTip()});
+document.addEventListener("focusin",e=>{const t=e.target.closest(".term");if(t)showTip(t)});
+addEventListener("scroll",hideTip,{passive:true});
+
+/* ================= SIMULATOR ================= */
+$("#weights").innerHTML=CH.map(c=>
+ `<div style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px">
+   <span style="display:flex;align-items:center;gap:9px"><i style="width:9px;height:9px;border-radius:3px;background:${c.col}"></i>${c.name}</span>
+   <span style="font-family:var(--f-mono);font-size:12px"><span style="color:var(--text-3)">${c.obs}% →</span> <b>${c.w.toFixed(2)}</b></span></div>`).join("");
+
+const PRE={observed:{wa:31,fb:22,yt:19,sms:16,web:12},even:{wa:20,fb:20,yt:20,sms:20,web:20},
+  whatsapp:{wa:100,fb:0,yt:0,sms:0,web:0},legacy:{wa:5,fb:10,yt:5,sms:55,web:25},
+  optimal:{wa:50,fb:21,yt:15,sms:10,web:4}};
+let mix={...PRE.observed};
+const SAT=0.6;
+const BEST=(()=>{const p=CH.map(c=>Math.pow(c.w,1/(1-SAT))),s=p.reduce((a,b)=>a+b,0);
+  return CH.reduce((a,c,i)=>a+c.w*Math.pow(p[i]/s,SAT),0)})();
+
+$("#slrows").innerHTML=CH.map(c=>`
+ <div class="slrow">
+   <label class="cn" for="sl_${c.k}"><i style="background:${c.col}"></i>${c.name}</label>
+   <input type="range" id="sl_${c.k}" min="0" max="100" value="${mix[c.k]}" data-k="${c.k}" aria-label="${c.name} share">
+   <output id="ov_${c.k}">${mix[c.k]}<small>pts</small></output></div>`).join("");
+
+$("#slrows").addEventListener("input",e=>{const k=e.target.dataset.k;if(!k)return;
+  mix[k]=+e.target.value;calc();});
+$$(".presets button").forEach(b=>b.addEventListener("click",()=>{
+  mix={...PRE[b.dataset.p]};CH.forEach(c=>$("#sl_"+c.k).value=mix[c.k]);calc();}));
+["#tField","#tLang","#tVideo"].forEach(s=>$(s).addEventListener("change",calc));
+
+function calc(){
+  const total=CH.reduce((a,c)=>a+mix[c.k],0);
+  $("#mixTotal").textContent=total;
+  $("#mixTotal").style.color=total===100?"var(--text)":"var(--amber)";
+  CH.forEach(c=>$("#ov_"+c.k).innerHTML=mix[c.k]+"<small>pts</small>");
+  const d=total||1;
+  let score=0;CH.forEach(c=>{score+=c.w*Math.pow(mix[c.k]/d,SAT)});
+  const eff=score/BEST;
+  const f=$("#tField").checked,l=$("#tLang").checked,v=$("#tVideo").checked;
+  const m=(f?1.12:1)*(l?1.08:1)*(v?1.06:1);
+  const idx=Math.max(0,Math.min(100,eff*78*m));
+  $("#simIdx").textContent=Math.round(idx).toString().padStart(2,"0");
+  $("#simMeter").style.width=idx+"%";
+  $("#simVd").textContent = idx>=90?"Well weighted and well supported"
+    : idx>=78?"Strong mix, minor gaps"
+    : idx>=66?"Workable, leaning narrow"
+    : idx>=52?"Too concentrated to reach everyone"
+    : "Weighted towards the channels that moved fewest people";
+  const rows=[["Mix score",score.toFixed(3)],["Best possible",BEST.toFixed(3)],
+    ["Allocation efficiency",(eff*100).toFixed(0)+"%"],
+    ["Field teams",f?"\u00d71.12":"off"],["Regional language",l?"\u00d71.08":"off"],
+    ["Video-led",v?"\u00d71.06":"off"],["Points allocated",total+(total===100?"":" (not 100)")]];
+  $("#simRows").innerHTML=rows.map(r=>`<div class="row"><span>${r[0]}</span><span>${r[1]}</span></div>`).join("");
+}
+calc();
+
+/* ================= RECOMMENDATIONS ================= */
+const RECS=[
+ ["Strengthen digital awareness campaigns","Invest in social-media campaigns, WhatsApp broadcasting, educational videos and awareness posts. Regular communication is what built trust in this sample.",1],
+ ["Increase video-based marketing","Short videos on benefits, billing, installation and frequently asked questions, to simplify technical concepts for consumers who will not read a brochure.",1],
+ ["Educate before installation","Advance information by SMS, WhatsApp, call, digital brochure and local-language video. Confusion on installation day is expensive to undo.",1],
+ ["Develop regional-language content","Material in Kannada, Hindi, Bengali, Odia, Telugu and Tamil. Reach without comprehension is not reach.",0],
+ ["Strengthen field-team training","Train field executives in communication, objection-handling, app usage, CRM and product knowledge — the human end of the campaign.",1],
+ ["Use customer testimonials","Stories from satisfied consumers travel further than official messaging, particularly through the peer channels this sample already trusted.",0],
+ ["Integrate a mobile application","Installation status, consumption monitoring, complaint registration, billing and energy-saving tips in one place.",0],
+ ["Enhance customer support","WhatsApp, toll-free numbers, chatbots, email and in-app support, so a question at 9pm does not become a refusal at 9am.",0],
+ ["Monitor marketing performance","Track reach, click-through rate, engagement, conversion and satisfaction as standing KPIs, so the next campaign starts from evidence.",1],
+ ["Collaborate with government agencies","Coordinate closely with distribution companies. Official association is itself a trust signal for a consumer deciding whether to open the door.",0]
+];
+$("#recs").innerHTML=RECS.map((r,i)=>`
+ <div class="rec"><div class="rh"><span class="ix">${String(i+1).padStart(2,"0")}</span><h4>${esc(r[0])}</h4></div>
+ <p>${esc(r[1])}</p><span class="pill${r[2]?" hi":""}">${r[2]?"Direct data support":"Inferred"}</span></div>`).join("");
+
+/* ================= SURVEY ================= */
+const SV=[
+ {q:"Are you aware of smart-meter technology?",o:[["Yes",82],["No",18]],
+  s:{Yes:"You are with the 82% who had already heard of smart meters. Awareness, in this sample, was not the bottleneck.",
+     No:"You are with the 18% who had not. That minority is precisely who the Chapter 5 recommendations are written for."}},
+ {q:"How did you first learn about smart meters?",o:[["Social Media",35],["WhatsApp",25],["Electricity Department",18],["Friends & Family",12],["Newspaper",10]],
+  s:{"Social Media":"The largest first source at 35% — the top of the awareness funnel in this sample.",
+     "WhatsApp":"25% arrived the same way. Social and WhatsApp together made up 60% of all first contact.",
+     "Electricity Department":"Only 18% heard from the utility first. The official channel was outrun by the informal one.",
+     "Friends & Family":"12% — word of mouth, the channel that testimonials are meant to feed.",
+     "Newspaper":"10%, the smallest share. Print reached fewest people first in this sample."}},
+ {q:"Which digital channel influenced you the most?",o:[["WhatsApp",31],["Facebook",22],["YouTube",19],["SMS",16],["Website",12]],
+  s:{"WhatsApp":"The most influential single channel at 31% — the reason it carries a weight of 1.00 in the planner above.",
+     "Facebook":"22%, second place. Reach plus a comment thread where objections surface in public.",
+     "YouTube":"19%. Video is where an installation procedure stops being abstract.",
+     "SMS":"16%. Universal reach, but a limited format for explaining anything.",
+     "Website":"12%, the lowest. Websites reward people already looking; campaigns must find people who are not."}},
+ {q:"How satisfied were you with the digital communication?",o:[["Highly Satisfied",28],["Satisfied",46],["Neutral",17],["Dissatisfied",7],["Highly Dissatisfied",2]],
+  s:{"Highly Satisfied":"28% went this far. The weighted mean across all respondents was 3.91 out of 5.",
+     "Satisfied":"The modal answer at 46%. With 'highly satisfied' that is 74% on the positive side.",
+     "Neutral":"17% sat here — communication received, but nothing that landed.",
+     "Dissatisfied":"7%. A small tail, but exactly where trust is lost.",
+     "Highly Dissatisfied":"Just 2% — the smallest cell in the whole study."}},
+ {q:"What is your overall perception of smart meters?",o:[["Very Positive",24],["Positive",48],["Neutral",16],["Negative",8],["Very Negative",4]],
+  s:{"Very Positive":"24%. The weighted mean perception was 3.80 out of 5 — favourable, not euphoric.",
+     "Positive":"The largest group at 48%. 72% held a positive or very positive view overall.",
+     "Neutral":"16% were unmoved either way — persuadable in both directions.",
+     "Negative":"8%. Negative perception clustered with low satisfaction on communication.",
+     "Very Negative":"4%, the group the study says field teams, not messaging, must reach."}},
+ {q:"Which benefit do you value most?",o:[["Accurate Billing",40],["Energy Monitoring",24],["Reduced Power Theft",18],["Convenience",18]],
+  s:{"Accurate Billing":"So did 40% — the clear winner, and the message campaigns should lead with.",
+     "Energy Monitoring":"24%. Seeing consumption in real time was the second most valued benefit.",
+     "Reduced Power Theft":"18%. A system-level benefit, valued by fewer than the personal ones.",
+     "Convenience":"18%. Tied with theft reduction at the bottom of the four."}},
+ {q:"Do you trust smart-meter technology?",o:[["Yes",76],["No",24]],
+  s:{Yes:"76% agreed. Trust tracked closely with satisfaction on communication across the sample.",
+     No:"You are with the 24% who did not. Chapter 5 argues this group is reached by trained field teams, not more posts."}},
+ {q:"Would you recommend smart meters to others?",o:[["Yes",79],["No",21]],
+  s:{Yes:"79% would — the highest positive response in the study, and the closest thing here to an adoption signal.",
+     No:"21% would not. Willingness to recommend was the stiffest test, and this is where it failed."}}
+];
+let si=0,ans=new Array(SV.length).fill(null);
+const svOpts=$("#svOpts");
+function renderQ(){
+  $("#svQuiz").style.display="";$("#svRes").classList.remove("on");
+  const q=SV[si],c=ans[si];
+  $("#svQ").textContent=q.q;
+  $("#svCount").textContent=`Question ${si+1} of ${SV.length}`;
+  $("#svBar").style.width=(si/SV.length*100)+"%";
+  svOpts.className="svopts"+(c?" done":"");
+  svOpts.innerHTML=q.o.map((o,i)=>
+    `<button data-o="${esc(o[0])}"><i class="fl" style="width:${c?o[1]:0}%"></i>
+      <span class="k">${i+1}</span><span>${esc(o[0])}</span><span class="pc">${o[1]}%</span></button>`).join("");
+  if(c){$$("#svOpts button").forEach(b=>{if(b.dataset.o===c)b.classList.add("mine")});
+    $("#svSay").innerHTML="<b>"+esc(c)+".</b> "+q.s[c];}
+  else $("#svSay").textContent="";
+  $("#svBack").disabled=si===0;$("#svNext").disabled=!c;
+  $("#svNext").textContent=si===SV.length-1?"See your alignment":"Next question";
+}
+svOpts.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-o]");if(!b||svOpts.classList.contains("done"))return;
+  ans[si]=b.dataset.o;const q=SV[si];
+  svOpts.classList.add("done");
+  $$("#svOpts button").forEach((btn,i)=>{btn.querySelector(".fl").style.width=q.o[i][1]+"%";
+    if(btn.dataset.o===ans[si])btn.classList.add("mine")});
+  $("#svSay").innerHTML="<b>"+esc(ans[si])+".</b> "+q.s[ans[si]];
+  $("#svNext").disabled=false;});
+$("#svNext").addEventListener("click",()=>{si<SV.length-1?(si++,renderQ()):result()});
+$("#svSkip").addEventListener("click",()=>{si<SV.length-1?(si++,renderQ()):result()});
+$("#svBack").addEventListener("click",()=>{if(si>0){si--;renderQ()}});
+$("#svRestart").addEventListener("click",()=>{si=0;ans.fill(null);renderQ()});
+
+function result(){
+  $("#svQuiz").style.display="none";$("#svRes").classList.add("on");
+  $("#svBar").style.width="100%";$("#svCount").textContent="Complete";
+  let a=0,m=0,rows="";
+  SV.forEach((q,i)=>{
+    const x=ans[i],top=q.o.reduce((p,o)=>o[1]>p[1]?o:p,q.o[0]);
+    if(x){a++;if(x===top[0])m++}
+    rows+=`<div style="display:grid;grid-template-columns:1fr auto auto;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:baseline">
+      <span class="muted">${esc(q.q)}</span>
+      <span style="font-family:var(--f-mono);font-size:11.5px;${x?"":"color:var(--text-3)"}">${x?esc(x):"skipped"}</span>
+      <span style="font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:${x?(x===top[0]?"var(--green)":"var(--amber)"):"var(--text-3)"}">${x?(x===top[0]?"majority":"minority"):"—"}</span></div>`;});
+  const pct=a?Math.round(m/a*100):0;
+  $("#alTxt").textContent=`${m} of ${a} matched the majority · ${pct}%`;
+  requestAnimationFrame(()=>$("#alFill").style.width=pct+"%");
+  $("#svSummary").innerHTML=rows+
+   `<p class="tiny" style="margin-top:18px">Matching the majority is not a score. The study's own point is that the 18% who had not heard, the 24% who did not trust, and the 21% who would not recommend are the population the next campaign has to reach.</p>`;
+}
+renderQ();
+
+/* ---------- questionnaire on paper ---------- */
+const PAPER=[["Section A — Respondent profile",null],
+ ["1. Gender",["Male","Female","Prefer not to say"]],
+ ["2. Age",["18–25 years","26–35 years","36–45 years","Above 45 years"]],
+ ["3. Educational qualification",["SSLC","PUC","Graduate","Post Graduate"]],
+ ["Section B — Research questions",null],
+ ["4. Are you aware of smart-meter technology?",["Yes","No"]],
+ ["5. How did you first learn about smart meters?",["Social Media","WhatsApp","Electricity Department","Friends & Family","Newspaper"]],
+ ["6. Which digital channel influenced you the most?",["Facebook","WhatsApp","YouTube","SMS","Website"]],
+ ["7. Digital marketing helped me understand smart-meter technology.",["Strongly Agree","Agree","Neutral","Disagree","Strongly Disagree"]],
+ ["8. Smart meters provide accurate electricity billing.",["Strongly Agree","Agree","Neutral","Disagree","Strongly Disagree"]],
+ ["9. I am satisfied with the digital communication during the awareness campaign.",["Highly Satisfied","Satisfied","Neutral","Dissatisfied","Highly Dissatisfied"]],
+ ["10. What is your overall perception of smart meters?",["Very Positive","Positive","Neutral","Negative","Very Negative"]],
+ ["11. Which benefit do you value the most?",["Accurate Billing","Energy Monitoring","Reduced Power Theft","Convenience"]],
+ ["12. Do you trust smart-meter technology?",["Yes","No"]],
+ ["13. Would you recommend smart meters to others?",["Yes","No"]],
+ ["14. Overall, how would you rate the digital-marketing initiatives?",["Excellent","Good","Average","Poor"]],
+ ["15. Suggestions for improvement:",["Open response"]]];
+$("#qPaper").innerHTML=PAPER.map(([t,o])=>o
+ ? `<div style="margin-bottom:16px"><div style="color:var(--text);font-weight:500;font-size:15px">${esc(t)}</div>
+    <div class="qbox">${o.map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`
+ : `<h4 style="margin:24px 0 14px;color:var(--cyan)">${esc(t)}</h4>`).join("");
+
+/* ================= COMMAND PALETTE ================= */
+const CMD=[
+ ...SECS.map(id=>({label:$(`[data-s="${id}"]`).textContent,kind:"Section",href:"#"+id})),
+ {label:"Table 4.6 — Most influential digital channel",kind:"Figure",href:"#data"},
+ ...FIGS.map(f=>({label:`${f.tbl} — ${f.title}`,kind:"Figure",href:"#"+f.id})),
+ ...Object.entries(GLOSS).map(([k,v])=>({label:`${k} — ${v.split(" — ")[0]}`,kind:"Term",href:"#appendix"})),
+ {label:"Toggle light / dark theme",kind:"Action",act:theme},
+ {label:"Print or save as PDF",kind:"Action",act:()=>print()}
+];
+const cm=$("#cmdk"),ci=$("#cIn"),cl=$("#cList");let cs=0,cshow=CMD;
+function openC(){cm.classList.add("on");ci.value="";fill("");ci.focus()}
+function closeC(){cm.classList.remove("on")}
+function fill(q){q=q.trim().toLowerCase();
+  cshow=q?CMD.filter(c=>c.label.toLowerCase().includes(q)||c.kind.toLowerCase().includes(q)):CMD;cs=0;
+  cl.innerHTML=cshow.length?cshow.map((c,i)=>
+    `<button data-i="${i}" class="${i===0?"sel":""}">${esc(c.label)}<span class="kind">${c.kind}</span></button>`).join("")
+    :`<div style="padding:20px 14px;color:var(--text-3);font-size:14px">No match in this study.</div>`;}
+function run(i){const c=cshow[i];if(!c)return;closeC();
+  if(c.act)c.act();
+  else if(c.href){const el=document.querySelector(c.href);
+    if(el){el.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
+      if(c.kind==="Figure"&&el.classList.contains("chart")){
+        el.style.borderColor="var(--cyan)";setTimeout(()=>el.style.borderColor="",1800);}}}}
+ci.addEventListener("input",()=>fill(ci.value));
+cl.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)run(+b.dataset.i)});
+cm.addEventListener("click",e=>{if(e.target===cm)closeC()});
+$("#findBtn").addEventListener("click",openC);
+
+addEventListener("keydown",e=>{
+  const typing=/^(INPUT|TEXTAREA)$/.test(e.target.tagName);
+  if(cm.classList.contains("on")){
+    if(e.key==="Escape")return closeC();
+    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();
+      cs=Math.max(0,Math.min(cshow.length-1,cs+(e.key==="ArrowDown"?1:-1)));
+      $$("#cList button").forEach((b,i)=>b.classList.toggle("sel",i===cs));
+      const s=$("#cList button.sel");if(s)s.scrollIntoView({block:"nearest"});return;}
+    if(e.key==="Enter"){e.preventDefault();run(cs)}
+    return;}
+  if(typing)return;
+  if(e.key==="k"||e.key==="K"||((e.metaKey||e.ctrlKey)&&e.key==="k")){e.preventDefault();return openC()}
+  if(e.key==="t"||e.key==="T")return theme();
+  if(/^[1-9]$/.test(e.key)){
+    const r=document.getElementById("survey").getBoundingClientRect();
+    if(r.top<innerHeight*.8&&r.bottom>innerHeight*.2&&!$("#svRes").classList.contains("on")){
+      const b=$$("#svOpts button")[+e.key-1];
+      if(b){e.preventDefault();b.click()}}}
+});
+})();
+</script>
+</body>
+</html>
